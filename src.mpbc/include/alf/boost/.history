@@ -1,0 +1,10 @@
+ls
+cd boost/
+cd ..
+cd boost/
+ls
+cd boost/
+ls
+cat > iomanip.hpp
+cat > iomanip.hpp
+e iomanip.hpp 

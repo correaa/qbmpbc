@@ -1,0 +1,15 @@
+emin1 = min(Etotvec1);
+emin2 = min(Etotvec2);
+emin = min(emin1, emin2);
+h1 = semilogy(Etotvec1-emin,'-o'); 
+hold;                              
+h2 = semilogy(Etotvec2-emin,'x-.');
+hl = legend('SCF','DCM');
+set(h1,'LineWidth',2);
+set(h2,'LineWidth',2);
+hx = xlabel('iteration number');
+hy = ylabel('reduction in total energy');
+set(hx,'FontSize',12);
+set(hy,'FontSize',12);
+set(hl,'FontSize',12);
+set(gca,'FontSize',12);

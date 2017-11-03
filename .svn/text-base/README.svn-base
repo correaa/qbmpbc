@@ -1,0 +1,12 @@
+
+ This is the Qbox package.
+
+ Qbox is a C++/MPI First-Principles Molecular Dynamics program.
+ It implements electronic structure calculations within the framework
+ of Density Functional Theory, using a plane-wave basis set and
+ norm-conserving pseudopotentials.
+
+ Qbox was developed by Francois Gygi <fgygi@ucdavis.edu>
+
+ For documentation, examples and installation instructions 
+ see <http://eslab.ucdavis.edu/software/qbox>

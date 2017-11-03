@@ -1,0 +1,224 @@
+\documentclass[12pt,fleqn]{tufte-handout}
+\usepackage[compatibility=off, font={small}]{caption}
+\usepackage{comment}\usepackage[utf8x]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{dcolumn}
+\usepackage{xcolor}
+\usepackage{geometry}
+\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+ \lstset{language={[GNU]C++}}
+ \lstset{backgroundcolor=\color{darkgray}}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt}
+\hypersetup{pdfencoding=unicode}
+\newcommand{\unicodesub}[1]{_{#1}}
+\newcommand{\unicodewide}[1]{#1}
+\DeclareUnicodeCharacter{"BD}{\ensuremath{\text{\textonehalf}}}
+\DeclareUnicodeCharacter{"035D}{\ensuremath{\phi}} 
+\DeclareUnicodeCharacter{"212B}{\mathrm{\mathring{A}}} 
+\DeclareUnicodeCharacter{"2329}{\ensuremath{\langle}}
+\DeclareUnicodeCharacter{"232A}{\ensuremath{\rangle}}
+\DeclareUnicodeCharacter{"1D62}{\ensuremath{_i}}
+\DeclareUnicodeCharacter{"2044}{\over}
+\DeclareUnicodeCharacter{"2C7C}{\ensuremath{_j}}
+\DeclareUnicodeCharacter{"2148}{\unichar{105}}
+\DeclareUnicodeCharacter{"1D4E9}{\ensuremath{\mathcal{Z}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{"2799}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{"27F6}{\ensuremath{\longrightarrow}}
+\DeclareUnicodeCharacter{"2423}{\ensuremath{\quad}}
+\DeclareUnicodeCharacter{"FF08}{\bigg(}
+\DeclareUnicodeCharacter{"FF09}{\bigg)}
+\DeclareUnicodeCharacter{"FF5B}{\left\{}
+\DeclareUnicodeCharacter{"FF5D}{\right\}}
+\DeclareUnicodeCharacter{"FFFD}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D700}{\ensuremath{\varepsilon}}
+\DeclareUnicodeCharacter{"1D714}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{"1D70B}{\ensuremath{\pi}}
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{bbold}
+\usepackage{textcomp}
+\usepackage{color}
+\geometry{left=1.1cm, right=8.5cm, marginparwidth = 6.5cm}
+\usepackage{savesym}
+\savesymbol{marginnote}
+\usepackage{pdfcomment}
+\restoresymbol{pdfcomm}{marginnote}
+\savesymbol{Cross}
+\usepackage{cool}
+\usepackage[]{attachfile2}
+\usepackage[]{pdfmarginpar}
+\pdfstringdefDisableCommands{%
+     \let\n\textLF
+ }
+\usepackage{lipsum}
+\DeclareUnicodeCharacter{"00B2}{^2}
+\DeclareUnicodeCharacter{"03B1}{\alpha}
+\DeclareUnicodeCharacter{"03B2}{\beta}
+\DeclareUnicodeCharacter{"03B8}{\theta}
+\DeclareUnicodeCharacter{"1D609}{_\text{B}}
+\DeclareUnicodeCharacter{"1D624}{_\text{c}}
+\DeclareUnicodeCharacter{"1D6FA}{\Omega}
+\DeclareUnicodeCharacter{"1D6FD}{\beta}
+\DeclareUnicodeCharacter{"1D707}{\mu}
+\DeclareUnicodeCharacter{"1D70E}{\sigma}
+\DeclareUnicodeCharacter{"1D708}{\nu}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\DeclareUnicodeCharacter{"00B2}{^2}
+\DeclareUnicodeCharacter{"03B1}{\alpha}
+\DeclareUnicodeCharacter{"03B2}{\beta}
+\DeclareUnicodeCharacter{"03B8}{\theta}
+\DeclareUnicodeCharacter{"1D609}{_\text{B}}
+\DeclareUnicodeCharacter{"1D624}{_\text{c}}
+\DeclareUnicodeCharacter{"1D6FA}{\Omega}
+\DeclareUnicodeCharacter{"1D6FD}{\beta}
+\DeclareUnicodeCharacter{"1D707}{\mu}
+\DeclareUnicodeCharacter{"1D70E}{\sigma}
+\DeclareUnicodeCharacter{"1D708}{\nu}
+
+\usepackage{graphicx}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{color}
+\makeatletter
+\AddToShipoutPicture{%
+   \setlength{\@tempdimb}{.5\paperwidth}%
+   \setlength{\@tempdimc}{.5\paperheight}%
+   \setlength{\unitlength}{1pt}%
+   \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+	\makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.95}%
+	{\fontsize{6cm}{6cm}\selectfont{}}}}%
+}%
+}
+\makeatother\usepackage{backref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\usepackage{datetime} \ddmmyyyydate
+%\usepgfplotslibrary{external}
+%\tikzexternalize% activate externalization!
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\title{The C++ LaTeX Library}
+\author{Alfredo Correa}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Abstract \lipsum[1]
+\label{0x7fffe2025750}
+\end{abstract}
+
+
+\section{Getting started}
+To start writting a LaTeX file that ultimatelly will be compiled as a PDF, you need to construct an stream object with the name of the destination PDF. Title information of the document can be added optionally. \begin{lstlisting}[frame=tb,language=C++]
+#include "latex.hpp"
+ ... 
+latex::ostream lo("latex.pdf"); 
+lo.author = "A. U. Thor"; 
+ lo.title = "The C\!++ \LaTeX{} Library";
+lo << latex::maketitle; 
+\end{lstlisting}
+The LaTeX output stream can accept any explicit command \begin{lstlisting}[frame=tb,language=C++]
+lo << "\section{Getting Started}\n";\end{lstlisting}
+or alternatively any of the predefined latex commands and environements
+\begin{lstlisting}[frame=tb,language=C++]
+lo << latex::section("Getting Started");\end{lstlisting}
+The ubiquitous latex namespace specifier can be eliminated by declaring the use of the namespace \begin{lstlisting}[frame=tb,language=C++]
+using namespace latex;
+lo << section("Getting Started");\end{lstlisting}
+It is called output stream (ostream) because it works similarly to an standard output stream, that is, the PDF is only produced (updated) if the flush and endl sent to the stream or if the stream is destroyed (or goes out of scope). For example\begin{lstlisting}
+lo << "Last line" << endl;
+\end{lstlisting}
+will add such line to the document, and end of line character and then will flush the result and generate the PDF. If endl or flush is used too frequently the resulting program will be slow because it will compile the PDF each time. To end a line/paragraph, the string "\\n\\n", newline, or par can be used instead. 
+
+\par Long paragraphs can be define by using the default C++ literal string concatenation. The latex control object par can be used to break paragraphs.~\newline
+And newline can be used to break lines.
+
+\section{Output of C++ results}
+Things get interesting we start using the output for dynamical C++ results in a program.For example, the following C++ code
+\begin{lstlisting}
+for(double x = 0.; x<5.; ++x) lo << "$" << x << "^2 = " << x*x << "$, ";
+\end{lstlisting}
+Outputs the following line
+
+\par $0.^2 = 0.$, $1.^2 = 1.$, $2.^2 = 4.$, $3.^2 = 9.$, $4.^2 = 16.$, 
+
+\section{Cross References}
+Crossed reference can be managed by explicitly giving \verb+\label+/\verb+\ref+ pairs as usual in \LaTeX{}, alternatively pointer reference to the objects can be used as references. This code 
+\begin{lstlisting}
+latex::equation quadratic("x^2");
+lo << quadratic << "as seen in previous equation "<< latex::ref(&quadratic) <<". ";
+
+\end{lstlisting}
+generates this text
+\begin{equation}
+\ensuremath{x^2}
+\label{0x7fffe2024ca0}
+\end{equation}
+as seen in previous equation \ref{0x7fffe2024f00}. 
+\begin{lstlisting}
+for(double x = 0.; x<5.; ++x){ lo << x << ", "; }
+\end{lstlisting}
+0., 1., 2., 3., 4., 
+
+\par \ensuremath{{\href{http://www.wolframalpha.com/input/?i=23*(meter)}
+{23.~\rm{m}}}}~\newline
+\ensuremath{{\href{http://www.wolframalpha.com/input/?i=12*(dimensionless)}
+{12.~}}}~\newline
+\hspace{-0.5cm}number(4)*number(5) = number(20)
+
+\ensuremath{{4}\cdot{5}}\begin{tikzpicture}
+\draw[help lines] (-0.5, -0.5) grid (3.5, 3.5);\draw[very thick, ->] (0., -0.25)--(0., 0.25);\draw[very thick, <-] (0., 0.75)--(0., 1.25);\draw[very thick, ->] (0., 1.75)--(0., 2.25);\draw[very thick, <-] (0., 2.75)--(0., 3.25);\draw[very thick, ->] (1., -0.25)--(1., 0.25);\draw[very thick, <-] (1., 0.75)--(1., 1.25);\draw[very thick, ->] (1., 1.75)--(1., 2.25);\draw[very thick, ->] (1., 2.75)--(1., 3.25);\draw[very thick, <-] (2., -0.25)--(2., 0.25);\draw[very thick, <-] (2., 0.75)--(2., 1.25);\draw[very thick, ->] (2., 1.75)--(2., 2.25);\draw[very thick, <-] (2., 2.75)--(2., 3.25);\draw[very thick, ->] (3., -0.25)--(3., 0.25);\draw[very thick, ->] (3., 0.75)--(3., 1.25);\draw[very thick, <-] (3., 1.75)--(3., 2.25);\draw[very thick, ->] (3., 2.75)--(3., 3.25);
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[small, title = a]
+\addlegendentry{c}
+%(not units) addplot
+\addplot coordinates { 
+( 1, 2 )
+( 3, 4 )
+}  node{}; 
+
+\end{axis}
+
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[small, title = {Plotting from file}]
+\addplot+[no markers, blue] file {/home/correaa/prj/alf/xyz.gr} node[]{ \attachfile[color=yellow,icon=Graph,print=false,zoom=false]{/home/correaa/prj/alf/xyz.gr} };
+\end{axis}
+
+\end{tikzpicture}
+
+
+\section{Spell Checker}
+The library supports spell checking which is implemented by marking mispelled words in the resulting pdf. In the following Wikipedia quote some words have been mispelled. (In order to see the corrections and suggestions you need to open the PDF with Acrobat Reader; to avoid printing the corrections from Acrobat Reader in the pring box select to print Document only, instead of Document and Markup)
+
+\par Shakespeare was \pdfmarkupcomment[author={not "vorn" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{vorn}{Von\n Born\n born\n corn\n Vern\n worn\n Horn\n Zorn\n horn\n lorn\n morn\n porn\n torn}
+ and \pdfmarkupcomment[author={not "raized" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{raized}{razed\n raised\n razzed\n raced\n riced\n raided\n railed\n rained}
+ in \emph{Stratford-upon-Avon}. At the age of 18, he \pdfmarkupcomment[author={not "narried" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{narried}{married\n carried\n harried\n parried\n tarried\n Nereid\n neared\n narrowed\n barred\n marred\n narrate\n narrated\n berried\n Norrie\n Jarred\n Jarrid\n jarred\n narced\n parred\n tarred\n varied\n warred\n quarried\n Harriet\n curried\n ferried\n hurried\n nannied\n serried\n worried\n Norrie's}
+ Anne Hathaway\cite{caca}, with whom he had three children: Susanna, and twins Hamnet and Judith. Between 1585 and 1592, he began a \pdfmarkupcomment[author={not "succesful" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{succesful}{successful\n successfully\n successively\n successive}
+ career in London as an acto, writer, and part owner of a playing company called the Lord Chamberlain's Men, later known as the King's Men. He appears to have \pdfmarkupcomment[author={not "retirred" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{retirred}{retired\n retried\n retirees\n retorted\n retread\n retiree\n retires\n retied\n retire\n recurred\n retrod\n returned\n rehired\n retrieved\n rewired\n stirred\n retiree's\n retries\n deterred\n referred\n reordered\n restored\n retarded\n tiered\n retreat\n tired\n retraced\n reared\n retard\n tarred}
+ to Stratford around 1613, where he died three years later. Few records of Shakespeare's private life survive, and there has been considerable \pdfmarkupcomment[author={not "speculacion" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{speculacion}{speculation\n speculating\n specializing\n speckling\n splicing}
+ about such maters as his physical appearance, sexuality, religious beliefs, and whether the works attributed to him were \pdfmarkupcomment[author={not "writen" in dictionary}, subject={English dictionary}, color=Red, opacity=0.5, markup=Squiggly]{writen}{writ en\n writ-en\n written\n write\n writing\n writer\n whiten\n writes\n rotten\n wrote\n Wren\n ridden\n rite\n wren\n writ\n Britten\n writers\n writeup\n wried\n ripen\n risen\n rites\n riven\n widen\n writs\n Briton\n Triton\n writ's\n writer's\n rite's}
+ by others.
+
+\end{document}

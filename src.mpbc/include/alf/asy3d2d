@@ -1,0 +1,20 @@
+rm -f $1+0_0.png $1+0_0.pdf
+asy $1.asy -tex pdflatex -inlineimage -render=0 
+asy $1.asy -o $1+0_0 -tex pdflatex -noprc -render=0 
+#asy $1.asy -o $1+0_0 -f pdf -tex pdflatex -noprc -render=4
+sed -i "s/text={}/text={\\\\includegraphics[hiresbb]{$1+0_0.pdf}}/g" $1_.tex 
+sed -i "s/\\includemovie/\\begin{preview}\\\\includemovie/g" $1_.tex
+sed -i "s/prc}}/prc}\\\\end{preview}}/g" $1_.tex
+sed -i "s/\.pdf//g" $1_.tex
+cat > $1.tex << EOF
+\documentclass[12pt]{article}
+\usepackage[active, tightpage]{preview}
+\input $1_.pre
+\RequirePackage{color,graphicx}
+\begin{document}
+\input $1_.tex
+\end{document}
+EOF
+rm $1.aux
+pdflatex $1
+

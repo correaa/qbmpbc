@@ -1,0 +1,75 @@
+#ifdef compile_instructions
+ln -sf $0 $0.cpp && c++ -lhunspell -lboost_regex $0.cpp -Wall -Wextra  -o $0.x  -D_HUNSPELL_TEST && ./$0.x $@ 
+rm -rf $0.cpp $0.x
+exit
+#endif
+#include<vector>
+#include<string>
+#include<hunspell/hunspell.hxx>
+namespace hunspell{
+class checker{
+	mutable Hunspell impl;
+	public:
+	checker(std::string const& dictionary = "en_US") : impl( ("/usr/share/hunspell/" + dictionary+".aff").c_str(),  ("/usr/share/hunspell/" + dictionary+".dic").c_str()){
+	}
+	bool operator()(std::string const& word) const{
+		return impl.spell(word.c_str());
+	}
+	std::vector<std::string> suggest(std::string const& word) const{
+		char ** wlst;
+		std::vector<std::string> ret(impl.suggest(&wlst,word.c_str()));
+		for (unsigned i=0; i < ret.size(); i++){
+			ret[i] = wlst[i];
+		}
+		impl.free_list(&wlst, ret.size());
+		return ret;
+	}
+};
+}
+
+#ifdef _HUNSPELL_TEST
+#include<iostream>
+#include<boost/tokenizer.hpp>
+#include<boost/regex.hpp>
+int main(){
+	{
+		hunspell::checker c;
+		std::string word = "chouse";
+		std::cout << c(word) << std::endl;   
+		if(not c(word)){
+			std::vector<std::string> l = c.suggest(word);
+			for(unsigned i = 0; i<l.size(); ++i){
+				std::cout << l[i] << std::endl;
+			}
+		}
+	}
+	{
+		std::string sentence = "Shakespeare\\cite{caca} was born and \\emph{raised} in Stratford-upon-Avon.";
+		typedef boost::tokenizer<boost::char_separator<char> > tokenizer; 
+		 boost::char_separator<char> sep(" .\\"); 
+		tokenizer tok(sentence, sep); 
+		hunspell::checker c;
+		for(tokenizer::iterator it = tok.begin(); it != tok.end(); ++it){
+		    std::cout << *it <<" ";
+			if(it->size()>2 and boost::regex_match(*it, boost::regex("^[a-z]*$") ) ){
+				if(c(*it)){
+					std::cout << "ok";
+				}else{
+					std::cout << "not ok suggestions: ";
+					std::vector<std::string> s = c.suggest(*it);
+					for(unsigned i=0; i<s.size(); ++i){
+						std::cout << s[i] << " ";
+					}
+					std::cout << ".";
+				}
+			}else{
+				std::cout << "is not a word";
+			}
+			std::cout<< std::endl;
+		}
+	}
+	return 0;
+}
+#endif
+/* vim:set ft=cpp ts=4 sw=4 sts=4 nowrap: cindent: */
+

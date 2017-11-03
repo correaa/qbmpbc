@@ -1,0 +1,170 @@
+# $Id: Fe.fdf,v 1.1 1999/04/20 12:52:43 emilio Exp $
+# -----------------------------------------------------------------------------
+# FDF for bcc iron
+#
+# GGA, Ferromagnetic.
+# Scalar-relativistic pseudopotential with non-linear partial-core correction
+#
+# E. Artacho, April 1999
+# -----------------------------------------------------------------------------
+SystemName       Fe 54 atoms + 1 proton (channeling)   # Descriptive name of the system
+SystemLabel            dm/Fe-p           # Short name for naming files
+# Species and atoms
+NumberOfSpecies         2
+NumberOfAtoms          71
+%block ChemicalSpeciesLabel
+  1  26  Fe-ea-aman
+  2  -1  Hghost
+%endblock ChemicalSpeciesLabel
+# Basisis set
+%block PAO.Basis                 # Define Basis set
+ Fe-ea-aman  5
+n=3 0 1
+ 5.
+n=3 1 1
+ 5.
+n=3 2 2
+ 6. 3.3
+n=4 0 2 E 50. 5.
+ 6. 2.5
+n=4 1 1 E 100. 4.3
+ 6.
+Hghost  2
+n=1  0  1  E   50.  5.5
+     6.0
+n=2  1  1  E 1000.  0.
+     6.0
+%endblock PAO.Basis
+# Box
+LatticeConstant       8.565 Ang
+%block LatticeVectors
+ 1.00000   0.000000  0.000000
+ 0.00000   1.000000  0.000000
+ 0.00000   0.000000  1.000000
+%endblock LatticeVectors
+kgridCutoff          5. Ang
+#%block BandLines
+#  1  0.00000   0.000000  0.000000  \Gamma
+# 40  2.00000   0.000000  0.000000  H
+# 28  1.00000   1.000000  0.000000  N
+# 28  0.00000   0.000000  0.000000  \Gamma
+# 34  1.00000   1.000000  1.000000  P
+#%endblock BandLines
+#%block ProjectedDensityOfStates
+#-20.00 10.00 0.200 500 eV
+#%endblock ProjectedDensityOfStates
+xc.functional         GGA           # Exchange-correlation functional
+xc.authors            PBE           # Exchange-correlation version
+SpinPolarized         .false.        # Logical parameters are: yes or no
+FixSpin               F
+TotalSpin             121.
+MeshCutoff           250. Ry        # Mesh cutoff. real space mesh
+# SCF options
+MaxSCFIterations      100           # Maximum number of SCF iter
+DM.MixingWeight       0.03          # New DM amount for next SCF cycle
+DM.Tolerance          1.d-3         # Tolerance in maximum difference
+DM.NumberPulay         3
+DM.UseSaveDM          .true.        # to use continuation files
+SolutionMethod        diagon        # OrderN or Diagon
+ElectronicTemperature  300 meV       # Temp. for Fermi smearing
+# MD options
+MD.TypeOfRun         ElectronDynamics           # Type of dynamics:
+MD.InitialTimeStep    0
+MD.FinalTimeStep      1700
+MD.OnlyElectrons    .false.
+MD.LengthTimeStep    0.002 fs
+MD.Nstep_ion_move    9999 #infinity > MD.FinalTimeStep
+#MD.Nelecsubsteps     1
+MD.NwriteTDWF        100
+MD.UseSaveTDWF      .false.
+WriteEigenvsTime    .true.
+WriteMullikvsTime   .true.
+MD.UseSaveXV        .false.
+# Output options
+WriteCoorStep     T
+WriteMullikenPop  1
+WriteForces       T
+LongOutput        T
+WriteMDhistory    F
+WriteMDXmol       F
+%block PointCharge
+2.6975851   0.000000  -8.0927554       # Initial position in Bohr
+0.          0.        60.              # Velocity in Bohr/fs
+1.00       12.0        0.1             # Charge  lambda (Bohr^-1)  sigma (Bohr^-1)
+%endblock PointCharge
+# Atomic coordinates
+AtomicCoordinatesFormat     NotScaledCartesianAng
+%block AtomicCoordinatesAndAtomicSpecies
+         -1.427500         -1.427500         -1.427500  1
+         -2.855000         -2.855000         -2.855000  1
+         -1.427500         -1.427500          1.427500  1
+         -2.855000         -2.855000          0.000000  1
+         -1.427500         -1.427500          4.282500  1
+         -2.855000         -2.855000          2.855000  1
+         -1.427500          1.427500         -1.427500  1
+         -2.855000          0.000000         -2.855000  1
+         -1.427500          1.427500          1.427500  1
+         -2.855000          0.000000          0.000000  1
+         -1.427500          1.427500          4.282500  1
+         -2.855000          0.000000          2.855000  1
+         -1.427500          4.282500         -1.427500  1
+         -2.855000          2.855000         -2.855000  1
+         -1.427500          4.282500          1.427500  1
+         -2.855000          2.855000          0.000000  1
+         -1.427500          4.282500          4.282500  1
+         -2.855000          2.855000          2.855000  1
+          1.427500         -1.427500         -1.427500  1
+          0.000000         -2.855000         -2.855000  1
+          1.427500         -1.427500          1.427500  1
+          0.000000         -2.855000          0.000000  1
+          1.427500         -1.427500          4.282500  1
+          0.000000         -2.855000          2.855000  1
+          1.427500          1.427500         -1.427500  1
+          0.000000          0.000000         -2.855000  1
+          1.427500          1.427500          1.427500  1
+          0.000000          0.000000          0.000000  1
+          1.427500          1.427500          4.282500  1
+          0.000000          0.000000          2.855000  1
+          1.427500          4.282500         -1.427500  1
+          0.000000          2.855000         -2.855000  1
+          1.427500          4.282500          1.427500  1
+          0.000000          2.855000          0.000000  1
+          1.427500          4.282500          4.282500  1
+          0.000000          2.855000          2.855000  1
+          4.282500         -1.427500         -1.427500  1
+          2.855000         -2.855000         -2.855000  1
+          4.282500         -1.427500          1.427500  1
+          2.855000         -2.855000          0.000000  1
+          4.282500         -1.427500          4.282500  1
+          2.855000         -2.855000          2.855000  1
+          4.282500          1.427500         -1.427500  1
+          2.855000          0.000000         -2.855000  1
+          4.282500          1.427500          1.427500  1
+          2.855000          0.000000          0.000000  1
+          4.282500          1.427500          4.282500  1
+          2.855000          0.000000          2.855000  1
+          4.282500          4.282500         -1.427500  1
+          2.855000          2.855000         -2.855000  1
+          4.282500          4.282500          1.427500  1
+          2.855000          2.855000          0.000000  1
+          4.282500          4.282500          4.282500  1
+          2.855000          2.855000          2.855000  1
+          1.427500          0.000000         -4.2825000 2
+          1.427500          0.000000         -3.7786765 2
+          1.427500          0.000000         -3.2748529 2
+          1.427500          0.000000         -2.7710294 2
+          1.427500          0.000000         -2.2672059 2
+          1.427500          0.000000         -1.7633824 2
+          1.427500          0.000000         -1.2595588 2
+          1.427500          0.000000         -0.7557353 2
+          1.427500          0.000000         -0.2519118 2
+          1.427500          0.000000          0.2519118 2
+          1.427500          0.000000          0.7557353 2
+          1.427500          0.000000          1.2595588 2
+          1.427500          0.000000          1.7633824 2
+          1.427500          0.000000          2.2672059 2
+          1.427500          0.000000          2.7710294 2
+          1.427500          0.000000          3.2748529 2
+          1.427500          0.000000          3.7786765 2
+%endblock AtomicCoordinatesAndAtomicSpecies
+

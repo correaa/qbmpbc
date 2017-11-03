@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/Qbox/!svn/ver/263/src.mpbc/target
+END
+hera-mpichgcc.mk
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/248/src.mpbc/target/hera-mpichgcc.mk
+END
+cygwin.mk
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/248/src.mpbc/target/cygwin.mk
+END
+ubuntu_serial.mk
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/263/src.mpbc/target/ubuntu_serial.mk
+END
+ubuntu.mk
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/258/src.mpbc/target/ubuntu.mk
+END
+ubuntu-9.10.mk
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/248/src.mpbc/target/ubuntu-9.10.mk
+END
+yana.mk
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/258/src.mpbc/target/yana.mk
+END

@@ -1,0 +1,347 @@
+#ifdef compile_instructions 
+ln -sf $0 .$0.cpp && c++ -std=c++0x -D_XYZ_TEST_HPP -I$HOME/usr/include -lhunspell -I$HOME/prj `pkg-config --libs gsl` -lboost_system -lboost_regex .$0.cpp -o .$0.x -Wall && ./.$0.x $@; exit
+#endif
+#ifndef XYZ_HPP_
+#define XYZ_HPP_
+#include "boost/units/systems/atomic.hpp"
+#include<boost/array.hpp>
+#include<boost/filesystem/fstream.hpp>
+#include<sstream>
+#include<boost/optional.hpp>
+#include<vector>
+#include<iostream>
+#include "boost/units/systems/atomic.hpp"
+#include<boost/lexical_cast.hpp>
+#include"boost/just.hpp"
+
+
+using std::clog;
+using std::endl;
+namespace xyz{
+	using namespace boost::units;
+	using std::string;
+	using boost::array;
+	using namespace boost::units;
+	class species : public string{
+		public:
+		species(string name) : string(name){}
+	};
+	struct crystal : array<array<double, 3>, 3> {
+		crystal(array<array<double, 3>, 3> const& a) : array<array<double, 3>, 3>(a){}
+	};
+	class ifstream : public boost::filesystem::ifstream{
+		public:
+		ifstream(boost::filesystem::path file) : boost::filesystem::ifstream(file){
+			assert(this->good());
+		}
+		friend class frame;
+	};
+	class ofstream : public boost::filesystem::ofstream{
+		public:
+		ofstream(boost::filesystem::path file) : boost::filesystem::ofstream(file){}
+		friend class frame;
+	};
+	struct line_istream : std::istringstream{
+		friend std::istream& operator>>(std::istream& is, line_istream& ls){
+			std::string line;
+			std::getline(is, line);
+			is.ignore();
+			ls.str(line);
+			return is;
+		}
+	};
+	class atom : public species, public boost::array<double, 3>{
+		public:
+		quantity<nonsi::angstrom_unit> const& operator[](size_t i) const{
+			return reinterpret_cast<quantity<nonsi::angstrom_unit> const&>(
+				boost::array<double, 3>::operator[](i)
+			);
+		}
+		atom(
+			species type, 
+			boost::array<double, 3> position
+		) : species(type), array<double, 3>(position){}
+		static atom read(line_istream& is){
+			string name; double x, y, z;
+			is>> name >> x >> y >> z;
+			clog << "read "<<name<<" "<<x<<" "<<y<<" "<<z<<endl;
+			return atom(species(name), (array<double, 3>){{x, y, z}});
+		}
+		friend std::istream& operator>>(line_istream& is, atom& a){
+			a = read(is); return is;
+		}
+		friend std::ostream& operator<<(std::ostream& os, atom const& a){
+			return os 
+				<< (species const&)a << ' '
+				<< a.array<double,3>::operator[](0) << ' '
+				<< a.array<double,3>::operator[](1) << ' ' 
+				<< a.array<double,3>::operator[](2);
+		}
+	};
+	// atomic configuration snapshot 
+	class frame : public std::vector<atom>, public boost::optional<crystal>{
+		string comment_;
+		public:
+		//boost::optional<crystal> const& crystal;
+		/*static*/ friend std::ostream& operator<<(std::ostream&, frame const&);
+		static frame load(boost::filesystem::path const& p){
+			xyz::ifstream xyzi(p);
+			frame ret; xyzi >> ret; assert(ret.size()!=0);
+			return ret;
+		}
+		private:
+		friend ofstream& operator<<(ofstream& os, frame& f){
+			//todo: improve formatting: fixed size more digits
+			os<<f.size()<<'\n'<<f.comment_<<'\n';
+			for(unsigned i=0; i!=f.size(); ++i){
+				os<<f[i];
+				if((boost::optional<crystal> const&)f and i==0){
+					for(unsigned j=0; j!=3; ++j){
+						os<<" crystal_vector "<<j+1<<" "
+							<<(*(boost::optional<crystal> const&)f)[j][0]<<' '
+							<<(*(boost::optional<crystal> const&)f)[j][1]<<' '
+							<<(*(boost::optional<crystal> const&)f)[j][2];
+					}
+				}
+				os<<'\n';
+			}
+			return os;
+		}
+		friend ifstream& operator>>(ifstream& is, frame& f){
+			//string line; std::getline(is, line); std::istringstream iss_line(line);
+			//clog << is.eof() << endl;
+			unsigned natoms; is >> natoms; is.ignore(99,'\n');
+			if(natoms>1000) clog << "warning: natom "<<natoms<<", likely error" << endl;
+			f.comment_="";
+			std::getline(is, f.comment_);
+			is.ignore();
+			f.reset();
+			f.clear();
+			//f.reserve(natoms);
+			array<boost::optional<array<double,3> >, 3> c;
+			//clog << "natom is: "<<natoms << endl;
+			//clog << "comment: "<<f.comment_ <<endl;
+			for(unsigned i=0; i!=natoms; ++i){
+				if(not is) throw std::runtime_error("error reading atom "+boost::lexical_cast<string>(natoms));
+				assert(is);
+				string line;
+				std::getline(is, line);
+				//is.ignore(99,'\n');
+				std::istringstream iss(line);
+				string name; double x,y,z;
+				iss>>name>>x>>y>>z;
+				if(name.size()>2) clog <<"atom with type name "<<name<<" is a likely error"<<endl;
+				f.push_back(atom(name, (array<double, 3>){{x,y,z}}));
+				string more; 
+				while(iss>>more){
+					if(more=="crystal_vector"){
+						unsigned dir; double x, y, z;
+						iss>>dir>>x>>y>>z;
+						c[dir-1]=(array<double, 3>){{x,y,z}};
+					}
+				}
+			}
+			if(c[0] and c[1] and c[2]){
+				(boost::optional<crystal>&)f = ((array<array<double,3>, 3>){{*c[0], *c[1], *c[2]}});
+			}
+			// nasty trick to handle eof in line:
+			int get= is.get();
+			if(is.eof()) return is;
+			is.putback(get);
+			return is;
+		}
+	};
+}
+#endif //XYZ_HPP
+
+#ifdef _XYZ_TEST_HPP
+#include"gsl/integration.hpp"
+//#include "gsl/histogram.hpp" 
+#include "gsl/units/histogram.hpp"
+#include<gsl/gsl_errno.h> //for set it off
+
+#include<boost/units/pow.hpp>
+using namespace std;
+using boost::array;
+double dot(array<double,3> const& a1, array<double,3> const& a2){
+	return 
+		+ a1[0]*a2[0]
+		+ a1[1]*a2[1]
+		+ a1[2]*a2[2]
+	;
+}
+array<double, 3> operator-(array<double, 3> const& a, array<double,3> const& b){
+	return (array<double,3>){{
+		a[0]-b[0], 
+		a[1]-b[1], 
+		a[2]-b[2]
+	}}; 
+}
+array<double, 3> operator+(array<double, 3> const& a, array<double,3> const& b){
+	return (array<double,3>){{
+		a[0]+b[0], 
+		a[1]+b[1], 
+		a[2]+b[2]
+	}}; 
+}
+array<double, 3> operator/(array<double, 3> const& a, double d){
+	return 
+		(array<double, 3>){{
+			a[0]/d,
+			a[1]/d,
+			a[2]/d
+		}}
+	;
+}
+array<double, 3> operator*(array<double, 3> const& a, double d){
+	return 
+		(array<double, 3>){{
+			a[0]*d,
+			a[1]*d,
+			a[2]*d
+		}}
+	;
+}
+// In[2]:= Cross[{a0,a1,a2},{b0,b1,b2}] //Out[2]= {-(a2 b1) + a1 b2, a2 b0 - a0 b2, -(a1 b0) + a0 b1}
+array<double, 3> cross(
+	array<double, 3> const& a,
+	array<double, 3> const& b
+){
+	return 
+		(array<double, 3>){{
+			a[1]*b[2] - a[2]*b[1],
+			a[2]*b[0] - a[0]*b[2],
+			a[0]*b[1] - a[1]*b[0]
+		}}
+	;
+}
+double volume(array<array<double, 3>, 3> const& a){
+	return dot(a[0], cross(a[1], a[2])); 
+}
+array<array<double, 3>,3> reciprocal(
+	array<array<double, 3>, 3> const& a
+){
+	double v = volume(a);
+	return 
+		(array<array<double, 3>, 3>){{
+			cross(a[1], a[2])/v,
+			cross(a[2], a[0])/v,
+			cross(a[0], a[1])/v
+		}}
+	;
+}
+std::ostream& operator<<(std::ostream& os, array<double, 3> const& a){
+	return os << "{ " << a[0]<<", "<<a[1]<<", "<<a[2]<<"}";
+}
+double frac_half(double x){
+	double intpart = 0;
+	double frac_part = modf(x, &intpart);
+	if(frac_part>0.5) frac_part-=1.;
+	return frac_part;
+}
+template<class R, class T>
+R operator|(T t, R(*f)(T)){
+	return f(t);
+}
+
+double operator|(boost::just<double> d, double(*f)(double)){
+	return f(d);
+}
+double s(double x){
+	return sin(x);
+}
+//#include"gsl/interpolation.hpp"
+#include<map>
+#include"gsl/interpolation.hpp"
+using boost::_;
+using namespace boost::units;
+int main(){
+	xyz::ifstream xyzi("total.xyz");
+	typedef gsl::histogram::units<nonsi::angstrom_unit> histogram;
+	histogram::interval iv(
+			 0.*nonsi::angstrom,
+			10.*nonsi::angstrom
+		);
+	quantity<nonsi::angstrom_unit> dr = width(iv)/200.;
+	clog << "dr = "<<dr<<endl;
+	histogram h(
+		iv, 
+		200
+	);
+	xyz::ofstream xyzo("test_out.xyz");
+	xyz::frame f0; xyzi>>f0;
+	array<array<double, 3>, 3> a0 = (*f0);
+	quantity<nonsi::angstrom_unit> r_imag = quantity<nonsi::angstrom_unit>::from_value(sqrt(std::min(
+		dot(a0[0],a0[0]),
+		std::min(
+			dot(a0[1],a0[1]),
+			dot(a0[2],a0[2])
+		)
+	)));
+	clog << "r_imag = "<<r_imag << endl;
+
+	auto n = f0.size()/volume(*f0)/pow<3>(nonsi::angstrom);
+	clog << n << endl;
+	double steps=0;
+	for(xyz::frame f; xyzi >> f; ){
+		assert(f.size()==f0.size());
+		++steps;
+		xyzo << f;
+		array<array<double, 3>, 3> a = (*f);
+		array<array<double, 3>, 3> b = reciprocal(a);
+		//cout << "volume is "<< dot(a[0], cross(a[1], a[2])) << endl;
+		for(unsigned i=0; i!=f.size(); ++i){
+			for(unsigned j=0; j!=i; ++j){
+				for(int xi=-1; xi<=1; ++xi){
+					for(int yi=-1; yi<=1; ++yi){
+						for(int zi=-1; zi<=1; ++zi){
+							array<double, 3> d = f[i] - f[j];
+							d = 
+								  a[0] * (frac_half(dot(d, b[0]))+xi) 
+								+ a[1] * (frac_half(dot(d, b[1]))+yi)
+								+ a[2] * (frac_half(dot(d, b[2]))+zi)
+							;
+							quantity<nonsi::angstrom_unit> r = sqrt(dot(d,d))*nonsi::angstrom;
+							h(r);
+						}
+					}
+				}
+			}
+		}
+	}
+	std::map<double, double> m;
+	for(unsigned i=0; i!=h.size(); ++i){
+		cout 
+			<< median(h.get_range(i)) << ' ' 
+			<< h[i] / (double)steps / (f0.size()/2.) / (4.*3.1415*pow<2>(median(h.get_range(i)))) /dr / n << std::endl;
+		m[median(h.get_range(i)).value()]=(h[i] / (double)steps / (f0.size()/2.) / (4.*3.1415*pow<2>(median(h.get_range(i)))) /dr / n).value();
+	}
+	gsl::interpolation::spline p(m);
+	using namespace boost::phoenix; using namespace arg_names;
+	boost::phoenix::function<gsl::interpolation::spline> php(p);
+	std::ofstream ofs("xyz.gr");
+	for(double x=0.; x<8. ; x+=0.01){
+		ofs<< x << " " << php(arg1)(x) <<endl;
+	}
+	cout << "calculating g(k)" << endl;
+	std::ofstream ofss("xyz.sk");
+//	double k=0.1;
+//	cout << gsl::integration::qawo(
+//				(arg1*(php(arg1)-1.)/k)*sin(k*arg1),
+//				gsl::integration::interval(0.,8.)
+//			) << endl;
+	gsl_set_error_handler_off();
+	for(double k=0.01; k<10.; k+=0.01){
+		ofss << k << " " <<
+			1. + 4.*3.1415* n.value()*
+			gsl::integration::qawo(
+				(arg1*(php(arg1)-1.)/k)*sin(k*arg1),
+				gsl::integration::interval(0.,8.)
+			) << endl;
+	}
+	return 0;
+	//#endif
+}
+#endif
+/* vim:set ft=cpp ts=4 sw=4 sts=4 cindent: */
+

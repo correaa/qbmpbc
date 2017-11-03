@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/Qbox/!svn/ver/262/examples/H2
+END
+gs.i
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/Qbox/!svn/ver/262/examples/H2/gs.i
+END
+qb.mpbc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/259/examples/H2/qb.mpbc
+END
+species.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/259/examples/H2/species.xsd
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/78/examples/H2/Makefile
+END
+gs.force.i
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/262/examples/H2/gs.force.i
+END
+run_qbox
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/78/examples/H2/run_qbox
+END
+hydrogen_bare_extended_withelectron.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/Qbox/!svn/ver/79/examples/H2/hydrogen_bare_extended_withelectron.xml
+END
+sample.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/259/examples/H2/sample.xsd
+END

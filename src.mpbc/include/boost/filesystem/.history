@@ -1,0 +1,149 @@
+ls
+cd filesystem/
+ls
+ls
+ls
+cd /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+cd /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+cd /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+cd /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+sh unique_path.hpp
+source ~/.bashrc
+source ~/.bashrc
+sh unique_path.hpp
+e +457 /g/g91/correaa/usr/include/boost/filesystem/v3/operations.hpp
+e /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/unique_path.hpp
+cd /g/g91/correaa/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+ls
+mv unique_path.hpp unique_path.hpp unique_indexed_path.hpp
+mv unique_path.hpp unique_path.hpp unique_indexed_path.hpp
+lsls
+ls
+mv unique_path.hpp unique_indexed_path.hpp
+ls
+rm unique_path.hpp.cpp 
+cd -
+cd -
+cd -
+cd -
+ls
+cd -
+ls
+e unique_indexed_path.hpp 
+ls
+sh unique_indexed_path.hpp
+ls
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+ls
+set | grep LD
+e ~/.bashrc
+e ~/.bashrc
+ls
+cd ~/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+ls
+e unique_indexed_path.hpp
+ls
+sh unique_indexed_path.hpp
+ls
+cd -
+cd ~/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+ls
+sh unique_indexed_path.hpp
+set | grep LD_LIB
+set | grep lib
+sh unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+ls
+cd -
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+ls
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+e unique_indexed_path.hpp
+e unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+grep lib
+set | grep lib
+set | grep lib | grep correaa
+set | grep lib | grep correaa
+pkg-config --help
+pkg-config --libs
+pkg-config --list-all
+pkg-config --list-all
+pkg-config --list-all | grep boost
+pkg-config --list-all | grep boost
+pkg-config --list-all | grep boost
+ls
+e unique_indexed_path.hpp
+set | grep lib | grep correaa
+cd ~/prj/mag/Qbox/src.mpbc/include/boost/filesystem/
+ls
+e unique_indexed_path.hpp
+ls
+ls
+sh unique_indexed_path.hpp
+set | grep lib | grep correaa
+export LD_LIBRARY_PATH=/g/g91/correaa/usr/libansel
+export LIBRARY_PATH=/g/g91/correaa/usr/libansel
+export LIBRARY_PATH=/g/g91/correaa/usr/libansel
+sh unique_indexed_path.hpp
+sh unique_indexed_path.hpp
+man c++
+c++ -v
+c++ -v
+man g++
+ls
+grep ls
+grep ls
+head unique_indexed_path.hpp
+ls
+c++ unique_indexed_path.hpp.cpp@
+c++ unique_indexed_path.hpp.cpp
+c++ unique_indexed_path.hpp.cpp -lboost_filesystem
+c++ unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem
+c++ unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+set | grep lib
+export RPATH=/g/g91/correaa/usr/libansel
+c++ unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+c++ unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+ls
+c++ unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+c++ unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+ls
+ldd a.out 
+c++ unique_indexed_path.hpp.cpp  -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+set | grep LIB
+man g++
+man g++
+set | grep lib
+ls
+c++ unique_indexed_path.hpp.cpp  -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+c++ unique_indexed_path.hpp.cpp  -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+c++ unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+man g++
+ldd a.out 
+g++-3.4.6 unique_indexed_path.hpp.cpp -L$HOME/usr/libansel -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+g++-3.4.6 unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+g++-4.4.0 unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+g++-4.3.2 unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+* g++-3.4.6 unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+g++-4.3.2 unique_indexed_path.hpp.cpp -lboost_filesystem -D_UNIQUE_INDEXED_PATH_TEST
+ls
+ls
+set | grep lib | grep correaa
+e ~/.bashrc
+ls

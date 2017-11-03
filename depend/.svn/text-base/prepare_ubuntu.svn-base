@@ -1,0 +1,10 @@
+sudo aptitude install \
+	libboost1.40-all-dev \
+	fftw-dev \
+	libfftw3-dev \
+	libxerces-c2-dev \
+	libscalapack-mpi-dev \
+	libhdf5-openmpi-dev \
+	liblapack-dev \
+	gfortran
+

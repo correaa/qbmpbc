@@ -1,0 +1,126 @@
+ls .*
+rm .*
+ls
+rm *.tex *.pdf *.out *.djs
+ls
+e minimization.hpp 
+cat cubature.hpp 
+ls
+cat fit_linear.hpp 
+cat >> minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+wput
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+wput
+wput
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+sh minimization.hpp
+e minimization.hpp 
+ls
+evince fit.pdf 
+cd "/home/correaa/prj/alf/gsl"
+evince minimization.pdf 
+evince multi_min.pdf 
+bg
+acroread multi_min.pdf 
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+cd "/home/correaa/prj/alf/gsl"
+sh multi_min.hpp
+sh multi_min.hpp
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+sh multi_min.hpp | grep error
+time sh multi_min.hpp
+man clang
+man clang
+man clang
+man clang
+man clang
+man clang
+man clang
+man clang
+man clang
+man clang
+sh fit.cpp
+cd "/home/correaa/prj/alf/gsl"
+evince minimization.pdf 
+evince minimization.pdf 
+cd ~/prj/alf/gsl/
+ls
+sh minimization.cpp
+sh minimization.cpp
+sh minimization.cpp
+sh minimization.cpp
+sh minimization.cpp
+sh minimization.hpp
+evince minimization.pdf &
+evince minimization.pdf &
+gnuplot
+gnuplot
+cd ~/prj/alf/gsl/
+cd ~/prj/alf/gsl/
+cd ~/prj/alf/gsl/
+cd ~/prj/alf/gsl/
+cd ~/prj/alf/gsl/
+gnuplot
+cd "/home/correaa/prj/alf/gsl"
+sh multi_min.hpp 
+evince multi_min.pdf 

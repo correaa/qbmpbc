@@ -1,0 +1,9 @@
+# methane molecule (reference frame rotated to ex = [1 1 1], ey = [1 -1 0], ez = [1 1 -2])
+set cell        16 0 0  0 16 0  0 0 16
+species carbon carbon_pbe.xml 
+species hydrogen hydrogen_pbe.xml 
+atom C    carbon       0.00000000         0.00000000         0.00000000 
+atom H1   hydrogen     2.07846096908265                  0                  0
+atom H2   hydrogen    -0.69282032302755   1.69705627484771   0.97979589711327
+atom H3   hydrogen    -0.69282032302755  -1.69705627484771   0.97979589711327
+atom H4   hydrogen    -0.69282032302755                  0  -1.95959179422654

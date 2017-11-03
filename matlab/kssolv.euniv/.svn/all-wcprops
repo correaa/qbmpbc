@@ -1,0 +1,485 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/88/matlab/kssolv.euniv
+END
+getcharge.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getcharge.m
+END
+polyline.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/polyline.m
+END
+vol3dtool.fig
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/vol3dtool.fig
+END
+getocc.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getocc.m
+END
+benzene_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/benzene_setup.m
+END
+h2o_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/h2o_setup.m
+END
+pulaymix.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/pulaymix.m
+END
+chebyfilt.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/chebyfilt.m
+END
+ptnio_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/ptnio_setup.m
+END
+trdcm.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/trdcm.m
+END
+getvion.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getvion.m
+END
+graphene30_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/graphene30_setup.m
+END
+getnel.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getnel.m
+END
+getealphat.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getealphat.m
+END
+broydenmix.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/broydenmix.m
+END
+c2h6_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/c2h6_setup.m
+END
+graphite_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/graphite_setup.m
+END
+vol3dtool.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/vol3dtool.m
+END
+getVharmonic.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getVharmonic.m
+END
+chebyscf.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/chebyscf.m
+END
+alanine_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/alanine_setup.m
+END
+sih4_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/sih4_setup.m
+END
+vrendrho.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/vrendrho.m
+END
+nic_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/nic_setup.m
+END
+johnsonmix.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/johnsonmix.m
+END
+getvtot.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getvtot.m
+END
+getewald.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getewald.m
+END
+gmpcg.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/gmpcg.m
+END
+getEntropy.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEntropy.m
+END
+broydenmix1.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/broydenmix1.m
+END
+loadppt.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/loadppt.m
+END
+getV1overR.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/getV1overR.m
+END
+glutamine_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/glutamine_setup.m
+END
+getatypes.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getatypes.m
+END
+getEext.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEext.m
+END
+lobpcg.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/lobpcg.m
+END
+getvhxc.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getvhxc.m
+END
+sibulk_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/sibulk_setup.m
+END
+outpwscf.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/outpwscf.m
+END
+plot_wf.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/88/matlab/kssolv.euniv/plot_wf.m
+END
+landau_level_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/landau_level_setup.m
+END
+scf.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/scf.m
+END
+al_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/al_setup.m
+END
+potmixing.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/potmixing.m
+END
+genprec.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/genprec.m
+END
+polymod.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/polymod.m
+END
+pseudoinit.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/pseudoinit.m
+END
+c12h26_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/c12h26_setup.m
+END
+getwq.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getwq.m
+END
+qdot_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/qdot_setup.m
+END
+vol3d.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/vol3d.m
+END
+getEcor.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEcor.m
+END
+getEion.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEion.m
+END
+trdcm1.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/trdcm1.m
+END
+vrendpsi.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/vrendpsi.m
+END
+sum3d.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/sum3d.m
+END
+fermidirac.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/fermidirac.m
+END
+getEharmonic.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEharmonic.m
+END
+isopsi.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/isopsi.m
+END
+hnco_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/hnco_setup.m
+END
+linsearch.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/linsearch.m
+END
+si2h4_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/si2h4_setup.m
+END
+alookup.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/alookup.m
+END
+setksopt.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/setksopt.m
+END
+elookup.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/elookup.m
+END
+getExc.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getExc.m
+END
+ctube661_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/ctube661_setup.m
+END
+andersonmix.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/andersonmix.m
+END
+slookup.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/slookup.m
+END
+hydrogen_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/88/matlab/kssolv.euniv/hydrogen_setup.m
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/README
+END
+co2_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/co2_setup.m
+END
+dcm.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/dcm.m
+END
+getEcoul.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/getEcoul.m
+END
+lanczos.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/lanczos.m
+END
+kerkmix.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/kerkmix.m
+END
+getVbox.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/87/matlab/kssolv.euniv/getVbox.m
+END
+alanine.in
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/alanine.in
+END
+genX0.m
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/genX0.m
+END
+pentacene_setup.m
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Qbox/!svn/ver/76/matlab/kssolv.euniv/pentacene_setup.m
+END

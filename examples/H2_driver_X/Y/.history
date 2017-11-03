@@ -1,0 +1,69 @@
+ls
+cd Y
+ls
+submit '../current.cpp.y x 2>&1 current.cpp.x.log' '-tM 200h'
+submit '../current.cpp.y x 2>&1 current.cpp.x.log' '-tM 200h'
+pstat
+submit './current.cpp.x x 2>&1 > current.cpp.x.log' '-tM 200h'
+cd Y
+cat .history 
+submit '../current.cpp.x y 2>&1 current.cpp.x.log' '-tM 200h'
+submit '../current.cpp.x y 2>&1 > current.cpp.x.log' '-tM 200h'
+prm 939900
+pstat
+ls
+ls
+less current.cpp.x.log
+less current.cpp.x.log
+less current.cpp.x.log
+../current.cpp.x y 2>&1 | tee current.cpp.x.log
+ln -s ../species.xsd 
+ln -s ../species.xsd 
+ln -s ../species.xsd 
+ls -all
+man ln
+ln -ns ../species.xsd 
+ln -nsf ../species.xsd 
+ls
+ls -all
+ln -s ../h2o
+cd -
+ls
+../current.cpp.x y 2>&1 | tee current.cpp.x.log
+ls
+rm convergence.y.dat 
+submit '../current.cpp.x y 2>&1 > current.cpp.x.log' '-tM 200h'
+submit '../current.cpp.x y 2>&1 > current.cpp.x.log' '-tM 200h'
+submit '../current.cpp.x x 2>&1 > current.cpp.x.log' '-tM 200h'
+cd Y
+ls
+ln -s ../sample.xsd 
+ls
+ls
+ls
+cd Y
+ls
+rm -rf *.h5
+ls
+rm *.dat
+rm *.dat -f
+ls
+mkdir wf
+big_file wf
+ls
+cd Y
+ls
+rm -rf *.xml
+ls
+rm -rf *.dat
+ls
+rm *.xml
+cd Y
+ls
+cd Y
+ls
+submit '../current.cpp.x y 2>&1 > current.cpp.x.log' '-tM 200h'
+big_file .submit-stderr
+cd Y
+big_file .submit-stderr
+ls

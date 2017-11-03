@@ -1,0 +1,678 @@
+\documentclass[12pt,fleqn]{tufte-handout}
+\usepackage[compatibility=off, font={small}]{caption}
+\usepackage{comment}\usepackage[utf8x]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+ \lstset{language={[GNU]C++}}
+ \lstset{backgroundcolor=\color{darkgray}}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt}
+\hypersetup{pdfencoding=unicode}
+\newcommand{\unicodesub}[1]{_{#1}}
+\newcommand{\unicodewide}[1]{#1}
+\DeclareUnicodeCharacter{"BD}{\ensuremath{\text{\textonehalf}}}
+\DeclareUnicodeCharacter{"035D}{\ensuremath{\phi}} 
+\DeclareUnicodeCharacter{"212B}{\mathrm{\mathring{A}}} 
+\DeclareUnicodeCharacter{"2329}{\ensuremath{\langle}}
+\DeclareUnicodeCharacter{"232A}{\ensuremath{\rangle}}
+\DeclareUnicodeCharacter{"1D62}{\ensuremath{_i}}
+\DeclareUnicodeCharacter{"2044}{\over}
+\DeclareUnicodeCharacter{"2C7C}{\ensuremath{_j}}
+\DeclareUnicodeCharacter{"2148}{\unichar{105}}
+\DeclareUnicodeCharacter{"1D4E9}{\ensuremath{\mathcal{Z}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{"2799}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{"27F6}{\ensuremath{\longrightarrow}}
+\DeclareUnicodeCharacter{"2423}{\ensuremath{\quad}}
+\DeclareUnicodeCharacter{"FF08}{\bigg(}
+\DeclareUnicodeCharacter{"FF09}{\bigg)}
+\DeclareUnicodeCharacter{"FF5B}{\left\{}
+\DeclareUnicodeCharacter{"FF5D}{\right\}}
+\DeclareUnicodeCharacter{"FFFD}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D700}{\ensuremath{\varepsilon}}
+\DeclareUnicodeCharacter{"1D714}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{"1D70B}{\ensuremath{\pi}}
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{bbold}
+\usepackage{textcomp}
+\usepackage{color}
+\geometry{left=1.1cm, right=8.5cm, marginparwidth = 6.5cm}
+\usepackage{savesym}
+\savesymbol{marginnote}
+\usepackage{pdfcomment}
+\restoresymbol{pdfcomm}{marginnote}
+\savesymbol{Cross}
+\usepackage{cool}
+\usepackage[]{attachfile2}
+\usepackage[]{pdfmarginpar}
+\pdfstringdefDisableCommands{%
+     \let\n\textLF
+ }
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\usepackage{pgfplots}
+\usepgfplotslibrary{units}
+\pgfplotsset{unit code/.code 2 args={{#1#2}}, unit marking pre={(}, unit marking post = {)} }
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{patterns}
+\usepgfmodule{decorations}
+\DeclareUnicodeCharacter{"00B2}{^2}
+\DeclareUnicodeCharacter{"03B1}{\alpha}
+\DeclareUnicodeCharacter{"03B2}{\beta}
+\DeclareUnicodeCharacter{"03B8}{\theta}
+\DeclareUnicodeCharacter{"1D609}{_\text{B}}
+\DeclareUnicodeCharacter{"1D624}{_\text{c}}
+\DeclareUnicodeCharacter{"1D6FA}{\Omega}
+\DeclareUnicodeCharacter{"1D6FD}{\beta}
+\DeclareUnicodeCharacter{"1D707}{\mu}
+\DeclareUnicodeCharacter{"1D70E}{\sigma}
+\DeclareUnicodeCharacter{"1D708}{\nu}
+
+\usepackage{graphicx}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{color}
+\makeatletter
+\AddToShipoutPicture{%
+   \setlength{\@tempdimb}{.5\paperwidth}%
+   \setlength{\@tempdimc}{.5\paperheight}%
+   \setlength{\unitlength}{1pt}%
+   \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+	\makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.95}%
+	{\fontsize{6cm}{6cm}\selectfont{}}}}%
+}%
+}
+\makeatother\usepackage{backref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\usepackage{datetime} \ddmmyyyydate
+%\usepgfplotslibrary{external}
+%\tikzexternalize% activate externalization!
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\begin{document}
+
+
+\section{Several Ways to Present Data}
+
+
+\subsection{Plain Text}
+\{(\ensuremath{0}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=5.79*(hartree)}
+{5.79~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=1*(atomic unit of time)}
+{1~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=2.51389*(hartree)}
+{2.51~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=2*(atomic unit of time)}
+{2~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.59149*(hartree)}
+{1.59~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=3*(atomic unit of time)}
+{3~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.33178*(hartree)}
+{1.33~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=4*(atomic unit of time)}
+{4~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.25866*(hartree)}
+{1.26~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=5*(atomic unit of time)}
+{5~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23807*(hartree)}
+{1.24~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=6*(atomic unit of time)}
+{6~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23227*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=7*(atomic unit of time)}
+{7~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23064*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=8*(atomic unit of time)}
+{8~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23018*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=9*(atomic unit of time)}
+{9~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23005*(hartree)}
+{1.23~E_{\rm h}}}})\}
+
+\subsection{Math Mode}
+
+\begin{equation}
+\ensuremath{}\{(\ensuremath{0}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=5.79*(hartree)}
+{5.79~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=1*(atomic unit of time)}
+{1~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=2.51389*(hartree)}
+{2.51~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=2*(atomic unit of time)}
+{2~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.59149*(hartree)}
+{1.59~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=3*(atomic unit of time)}
+{3~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.33178*(hartree)}
+{1.33~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=4*(atomic unit of time)}
+{4~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.25866*(hartree)}
+{1.26~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=5*(atomic unit of time)}
+{5~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23807*(hartree)}
+{1.24~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=6*(atomic unit of time)}
+{6~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23227*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=7*(atomic unit of time)}
+{7~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23064*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=8*(atomic unit of time)}
+{8~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23018*(hartree)}
+{1.23~E_{\rm h}}}}), (\ensuremath{{\href{http://www.wolframalpha.com/input/?i=9*(atomic unit of time)}
+{9~ℏ/E_{\rm h}}}}, \ensuremath{{\href{http://www.wolframalpha.com/input/?i=1.23005*(hartree)}
+{1.23~E_{\rm h}}}})\}
+\label{0x7fff1e70d700}
+\end{equation}
+
+
+\subsection{Tabular}
+\begin{tabular}{cc}
+\hline\hline\ensuremath{ℏ/E_h} &\ensuremath{E_h} \\
+\hline\ensuremath{0}&\ensuremath{5.79}\\
+\ensuremath{1}&\ensuremath{2.51}\\
+\ensuremath{2}&\ensuremath{1.59}\\
+\ensuremath{3}&\ensuremath{1.33}\\
+\ensuremath{4}&\ensuremath{1.26}\\
+\ensuremath{5}&\ensuremath{1.24}\\
+\ensuremath{6}&\ensuremath{1.23}\\
+\ensuremath{7}&\ensuremath{1.23}\\
+\ensuremath{8}&\ensuremath{1.23}\\
+\ensuremath{9}&\ensuremath{1.23}\\
+\hline\hline\end{tabular}
+~\newline
+
+
+\subsection{Graphically}
+\begin{tikzpicture}
+\begin{axis}[x unit = {\href{http://www.wolframalpha.com/input/?i=(atomic unit of time)}{ℏ/E_{\rm h}}}, y unit = {\href{http://www.wolframalpha.com/input/?i=(hartree)}{E_{\rm h}}}, xlabel = {Time}, ylabel = {Energy}  , , ]
+\addplot coordinates { 
+( 0, 5.79 )
+( 1, 2.51389124379458 )
+( 2, 1.59148612409921 )
+( 3, 1.3317782608518 )
+( 4, 1.25865618813953 )
+( 5, 1.23806829584054 )
+( 6, 1.23227166982062 )
+( 7, 1.23063960021743 )
+( 8, 1.23018008270147 )
+( 9, 1.23005070320254 )
+}  node{ }; 
+
+\end{axis}
+
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[x unit = {\href{http://www.wolframalpha.com/input/?i=(atomic unit of time)}{ℏ/E_{\rm h}}}, y unit = {\href{http://www.wolframalpha.com/input/?i=(hartree)}{E_{\rm h}}}, xlabel = {Time}, ylabel = {Energy}  , , ]
+\addplot coordinates { 
+( 0, 5.79 )
+( 1, 2.51389124379458 )
+( 2, 1.59148612409921 )
+( 3, 1.3317782608518 )
+( 4, 1.25865618813953 )
+( 5, 1.23806829584054 )
+( 6, 1.23227166982062 )
+( 7, 1.23063960021743 )
+( 8, 1.23018008270147 )
+( 9, 1.23005070320254 )
+}  node{ }; 
+\addplot+[no markers] coordinates { 
+( 0, 5.79 )
+( 0.1, 5.35147203231619 )
+( 0.2, 4.95511660376415 )
+( 0.3, 4.59687804814268 )
+( 0.4, 4.2730907262367 )
+( 0.5, 3.98044151754064 )
+( 0.6, 3.71593591909321 )
+( 0.7, 3.47686740453353 )
+( 0.8, 3.2607897298482 )
+( 0.9, 3.06549190243077 )
+( 1, 2.88897555732703 )
+( 1.1, 2.72943450917095 )
+( 1.2, 2.58523627057847 )
+( 1.3, 2.45490534788808 )
+( 1.4, 2.33710814332352 )
+( 1.5, 2.23063930909153 )
+( 1.6, 2.13440941378442 )
+( 1.7, 2.04743379488508 )
+( 1.8, 1.96882248330898 )
+( 1.9, 1.89777109688692 )
+( 2, 1.83355260960713 )
+( 2.1, 1.77550991239633 )
+( 2.2, 1.72304908931858 )
+( 2.3, 1.67563334039155 )
+( 2.4, 1.63277748883584 )
+( 2.5, 1.59404301655339 )
+( 2.6, 1.55903357703614 )
+( 2.7, 1.5273909397911 )
+( 2.8, 1.49879132478361 )
+( 2.9, 1.47294208939142 )
+( 3, 1.44957873396912 )
+( 3.1, 1.4284621953827 )
+( 3.2, 1.40937640082059 )
+( 3.3, 1.39212605685079 )
+( 3.4, 1.37653465110092 )
+( 3.5, 1.36244264611352 )
+( 3.6, 1.34970584689536 )
+( 3.7, 1.33819392545701 )
+( 3.8, 1.32778908724508 )
+( 3.9, 1.31838486582156 )
+( 4, 1.30988503345693 )
+( 4.1, 1.30220261648977 )
+( 4.2, 1.29525900537777 )
+( 4.3, 1.28898315033361 )
+( 4.4, 1.28331083431532 )
+( 4.5, 1.27818401593203 )
+( 4.6, 1.27355023554135 )
+( 4.7, 1.2693620784615 )
+( 4.8, 1.26557668980546 )
+( 4.9, 1.26215533597272 )
+( 5, 1.25906300831169 )
+( 5.1, 1.25626806489728 )
+( 5.2, 1.25374190675816 )
+( 5.3, 1.2514586852407 )
+( 5.4, 1.24939503751531 )
+( 5.5, 1.24752984751866 )
+( 5.6, 1.24584402988573 )
+( 5.7, 1.24432033466079 )
+( 5.8, 1.24294317078901 )
+( 5.9, 1.24169844658254 )
+( 5.99999999999999, 1.24057342552883 )
+( 6.09999999999999, 1.23955659596554 )
+( 6.19999999999999, 1.23863755328862 )
+( 6.29999999999999, 1.23780689348831 )
+( 6.39999999999999, 1.23705611692354 )
+( 6.49999999999999, 1.23637754135025 )
+( 6.59999999999999, 1.23576422331359 )
+( 6.69999999999999, 1.23520988709978 )
+( 6.79999999999999, 1.23470886052045 )
+( 6.89999999999999, 1.23425601687262 )
+( 6.99999999999999, 1.23384672248017 )
+( 7.09999999999999, 1.23347678928028 )
+( 7.19999999999999, 1.2331424319695 )
+( 7.29999999999999, 1.232840229271 )
+( 7.39999999999999, 1.23256708892671 )
+( 7.49999999999999, 1.23232021605612 )
+( 7.59999999999999, 1.23209708455794 )
+( 7.69999999999999, 1.23189541126205 )
+( 7.79999999999999, 1.23171313256717 )
+( 7.89999999999999, 1.23154838332527 )
+( 7.99999999999999, 1.23139947775667 )
+}  node{ }; 
+
+\end{axis}
+
+\end{tikzpicture}
+~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.989*(atomic unit of time)}
+{0.989~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23926*(hartree)}
+{1.24~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.54689*(hartree)}
+{4.55~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.775901*(atomic unit of time)}
+{0.776~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23004*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.55995*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.788982*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\ensuremath{(a + b e^{-\#1/\lambda})\& \quad \text{with} \quad a = {\href{http://www.wolframalpha.com/input/?i=1.23*(hartree)}
+{1.23~E_{\rm h}}} , b = {\href{http://www.wolframalpha.com/input/?i=4.56*(hartree)}
+{4.56~E_{\rm h}}} , \lambda = {\href{http://www.wolframalpha.com/input/?i=0.789*(atomic unit of time)}
+{0.789~ℏ/E_{\rm h}}}}~\newline
+\begin{tikzpicture}
+\begin{axis}[x unit = {\href{http://www.wolframalpha.com/input/?i=(atomic unit of time)}{ℏ/E_{\rm h}}}, y unit = {\href{http://www.wolframalpha.com/input/?i=(hartree)}{E_{\rm h}}}, xlabel = {Time}, ylabel = {Energy}  , , ]
+\addplot coordinates { 
+( 0, 5.79 )
+( 1, 2.51389124379458 )
+( 2, 1.59148612409921 )
+( 3, 1.3317782608518 )
+( 4, 1.25865618813953 )
+( 5, 1.23806829584054 )
+( 6, 1.23227166982062 )
+( 7, 1.23063960021743 )
+( 8, 1.23018008270147 )
+( 9, 1.23005070320254 )
+}  node{ }; 
+\addplot+[no markers] coordinates { 
+( 0, 5.79 )
+( 0.1, 5.24717898485734 )
+( 0.2, 4.76897521850427 )
+( 0.3, 4.34769668326892 )
+( 0.4, 3.97656701692705 )
+( 0.5, 3.64961651335563 )
+( 0.6, 3.36158609843554 )
+( 0.7, 3.10784273663362 )
+( 0.8, 2.88430490755956 )
+( 0.9, 2.68737695377075 )
+( 1, 2.51389124379458 )
+( 1.1, 2.36105722004692 )
+( 1.2, 2.22641651207097 )
+( 1.3, 2.10780339308254 )
+( 1.4, 2.00330994375606 )
+( 1.5, 1.91125536290308 )
+( 1.6, 1.83015893139817 )
+( 1.7, 1.75871619447087 )
+( 1.8, 1.69577797925046 )
+( 1.9, 1.64033191005576 )
+( 2, 1.59148612409921 )
+( 2.1, 1.54845492566861 )
+( 2.2, 1.51054614803076 )
+( 2.3, 1.47715001977014 )
+( 2.4, 1.44772935647537 )
+( 2.5, 1.42181092000425 )
+( 2.6, 1.3989778063393 )
+( 2.7, 1.37886273959069 )
+( 2.8, 1.36114216427895 )
+( 2.9, 1.34553104087064 )
+( 3, 1.3317782608518 )
+( 3.1, 1.31966260758973 )
+( 3.2, 1.3089891980125 )
+( 3.3, 1.29958634786986 )
+( 3.4, 1.29130281015258 )
+( 3.5, 1.28400534224948 )
+( 3.6, 1.27757656270935 )
+( 3.7, 1.27191306313328 )
+( 3.8, 1.26692374482676 )
+( 3.9, 1.2625283534562 )
+( 4, 1.25865618813953 )
+( 4.1, 1.25524496420619 )
+( 4.2, 1.2522398113339 )
+( 4.3, 1.24959239094688 )
+( 4.4, 1.24726011867871 )
+( 4.5, 1.24520547939303 )
+( 4.6, 1.24339542374394 )
+( 4.7, 1.24180083656961 )
+( 4.8, 1.24039606856824 )
+( 4.9, 1.23915852372313 )
+( 5, 1.23806829584054 )
+( 5.1, 1.237107848354 )
+( 5.2, 1.23626173224457 )
+( 5.3, 1.23551633753985 )
+( 5.4, 1.2348596743944 )
+( 5.5, 1.23428118023035 )
+( 5.6, 1.23377154983591 )
+( 5.7, 1.23332258568885 )
+( 5.8, 1.23292706609751 )
+( 5.9, 1.2325786290382 )
+( 5.99999999999999, 1.23227166982062 )
+( 6.09999999999999, 1.23200125093507 )
+( 6.19999999999999, 1.23176302263153 )
+( 6.29999999999999, 1.2315531529529 )
+( 6.39999999999999, 1.23136826609707 )
+( 6.49999999999999, 1.23120538811642 )
+( 6.59999999999999, 1.23106189908111 )
+( 6.69999999999999, 1.23093549093699 )
+( 6.79999999999999, 1.23082413037996 )
+( 6.89999999999999, 1.23072602614981 )
+( 6.99999999999999, 1.23063960021743 )
+( 7.09999999999999, 1.23056346240179 )
+( 7.19999999999999, 1.2304963880086 )
+( 7.29999999999999, 1.23043729813081 )
+( 7.39999999999999, 1.23038524229413 )
+( 7.49999999999999, 1.23033938316843 )
+( 7.59999999999999, 1.23029898309913 )
+( 7.69999999999999, 1.23026339224181 )
+( 7.79999999999999, 1.23023203810934 )
+( 7.89999999999999, 1.23020441636327 )
+( 7.99999999999999, 1.23018008270147 )
+}  node{ }; 
+
+\end{axis}
+
+\end{tikzpicture}
+~\newline
+\begin{tikzpicture}
+\begin{axis}[x unit = {\href{http://www.wolframalpha.com/input/?i=(atomic unit of energy per boltzman constant)}{\mathit{E}_{\rm h}/\mathit{k}_{\rm B}}}, y unit = {\href{http://www.wolframalpha.com/input/?i=(hartree)}{E_{\rm h}}}, xlabel = {Temperature}, ylabel = {Energy}  , , ]
+\addplot coordinates { 
+( 0, 1.23 )
+( 0.000316681565303202, 1.23144406793778 )
+( 0.000633363130606404, 1.23288813587557 )
+( 0.000950044695909606, 1.23433220381335 )
+( 0.00126672626121281, 1.23577627175113 )
+( 0.00158340782651601, 1.23722033968891 )
+( 0.00190008939181921, 1.2386644076267 )
+( 0.00221677095712242, 1.24010847556448 )
+( 0.00253345252242562, 1.24155254350226 )
+( 0.00285013408772882, 1.24299661144004 )
+}  node{ }; 
+\addplot+[no markers] coordinates { 
+( 0, 1.23 )
+( 3.16681565303202e-05, 1.23009500446959 )
+( 6.33363130606404e-05, 1.23019000893918 )
+( 9.50044695909606e-05, 1.23028501340877 )
+( 0.000126672626121281, 1.23038001787836 )
+( 0.000158340782651601, 1.23047502234795 )
+( 0.000190008939181921, 1.23057002681755 )
+( 0.000221677095712242, 1.23066503128714 )
+( 0.000253345252242562, 1.23076003575673 )
+( 0.000285013408772882, 1.23085504022632 )
+( 0.000316681565303202, 1.23095004469591 )
+( 0.000348349721833522, 1.2310450491655 )
+( 0.000380017878363843, 1.23114005363509 )
+( 0.000411686034894163, 1.23123505810468 )
+( 0.000443354191424483, 1.23133006257427 )
+( 0.000475022347954803, 1.23142506704386 )
+( 0.000506690504485123, 1.23152007151346 )
+( 0.000538358661015444, 1.23161507598305 )
+( 0.000570026817545764, 1.23171008045264 )
+( 0.000601694974076084, 1.23180508492223 )
+( 0.000633363130606404, 1.23190008939182 )
+( 0.000665031287136724, 1.23199509386141 )
+( 0.000696699443667044, 1.232090098331 )
+( 0.000728367600197365, 1.23218510280059 )
+( 0.000760035756727685, 1.23228010727018 )
+( 0.000791703913258005, 1.23237511173977 )
+( 0.000823372069788325, 1.23247011620936 )
+( 0.000855040226318645, 1.23256512067896 )
+( 0.000886708382848965, 1.23266012514855 )
+( 0.000918376539379286, 1.23275512961814 )
+( 0.000950044695909606, 1.23285013408773 )
+( 0.000981712852439926, 1.23294513855732 )
+( 0.00101338100897025, 1.23304014302691 )
+( 0.00104504916550057, 1.2331351474965 )
+( 0.00107671732203089, 1.23323015196609 )
+( 0.00110838547856121, 1.23332515643568 )
+( 0.00114005363509153, 1.23342016090527 )
+( 0.00117172179162185, 1.23351516537487 )
+( 0.00120338994815217, 1.23361016984446 )
+( 0.00123505810468249, 1.23370517431405 )
+( 0.00126672626121281, 1.23380017878364 )
+( 0.00129839441774313, 1.23389518325323 )
+( 0.00133006257427345, 1.23399018772282 )
+( 0.00136173073080377, 1.23408519219241 )
+( 0.00139339888733409, 1.234180196662 )
+( 0.00142506704386441, 1.23427520113159 )
+( 0.00145673520039473, 1.23437020560118 )
+( 0.00148840335692505, 1.23446521007078 )
+( 0.00152007151345537, 1.23456021454037 )
+( 0.00155173966998569, 1.23465521900996 )
+( 0.00158340782651601, 1.23475022347955 )
+( 0.00161507598304633, 1.23484522794914 )
+( 0.00164674413957665, 1.23494023241873 )
+( 0.00167841229610697, 1.23503523688832 )
+( 0.00171008045263729, 1.23513024135791 )
+( 0.00174174860916761, 1.2352252458275 )
+( 0.00177341676569793, 1.23532025029709 )
+( 0.00180508492222825, 1.23541525476668 )
+( 0.00183675307875857, 1.23551025923628 )
+( 0.00186842123528889, 1.23560526370587 )
+( 0.00190008939181921, 1.23570026817546 )
+( 0.00193175754834953, 1.23579527264505 )
+( 0.00196342570487985, 1.23589027711464 )
+( 0.00199509386141017, 1.23598528158423 )
+( 0.0020267620179405, 1.23608028605382 )
+( 0.00205843017447082, 1.23617529052341 )
+( 0.00209009833100114, 1.236270294993 )
+( 0.00212176648753146, 1.23636529946259 )
+( 0.00215343464406178, 1.23646030393219 )
+( 0.0021851028005921, 1.23655530840178 )
+( 0.00221677095712242, 1.23665031287137 )
+( 0.00224843911365274, 1.23674531734096 )
+( 0.00228010727018306, 1.23684032181055 )
+( 0.00231177542671338, 1.23693532628014 )
+( 0.0023434435832437, 1.23703033074973 )
+( 0.00237511173977402, 1.23712533521932 )
+( 0.00240677989630434, 1.23722033968891 )
+( 0.00243844805283466, 1.2373153441585 )
+( 0.00247011620936498, 1.23741034862809 )
+( 0.0025017843658953, 1.23750535309769 )
+( 0.00253345252242562, 1.23760035756728 )
+( 0.00256512067895594, 1.23769536203687 )
+( 0.00259678883548626, 1.23779036650646 )
+( 0.00262845699201658, 1.23788537097605 )
+( 0.0026601251485469, 1.23798037544564 )
+( 0.00269179330507722, 1.23807537991523 )
+( 0.00272346146160754, 1.23817038438482 )
+( 0.00275512961813786, 1.23826538885441 )
+( 0.00278679777466818, 1.238360393324 )
+( 0.0028184659311985, 1.2384553977936 )
+( 0.00285013408772882, 1.23855040226319 )
+( 0.00288180224425914, 1.23864540673278 )
+( 0.00291347040078946, 1.23874041120237 )
+( 0.00294513855731978, 1.23883541567196 )
+( 0.0029768067138501, 1.23893042014155 )
+( 0.00300847487038042, 1.23902542461114 )
+( 0.00304014302691074, 1.23912042908073 )
+( 0.00307181118344106, 1.23921543355032 )
+( 0.00310347933997138, 1.23931043801991 )
+( 0.0031351474965017, 1.23940544248951 )
+}  node{ }; 
+\addplot+[no markers] coordinates { 
+( 0, 1.23 )
+( 3.16681565303202e-05, 1.23014440679378 )
+( 6.33363130606404e-05, 1.23028881358756 )
+( 9.50044695909606e-05, 1.23043322038133 )
+( 0.000126672626121281, 1.23057762717511 )
+( 0.000158340782651601, 1.23072203396889 )
+( 0.000190008939181921, 1.23086644076267 )
+( 0.000221677095712242, 1.23101084755645 )
+( 0.000253345252242562, 1.23115525435023 )
+( 0.000285013408772882, 1.231299661144 )
+( 0.000316681565303202, 1.23144406793778 )
+( 0.000348349721833522, 1.23158847473156 )
+( 0.000380017878363843, 1.23173288152534 )
+( 0.000411686034894163, 1.23187728831912 )
+( 0.000443354191424483, 1.2320216951129 )
+( 0.000475022347954803, 1.23216610190667 )
+( 0.000506690504485123, 1.23231050870045 )
+( 0.000538358661015444, 1.23245491549423 )
+( 0.000570026817545764, 1.23259932228801 )
+( 0.000601694974076084, 1.23274372908179 )
+( 0.000633363130606404, 1.23288813587557 )
+( 0.000665031287136724, 1.23303254266934 )
+( 0.000696699443667044, 1.23317694946312 )
+( 0.000728367600197365, 1.2333213562569 )
+( 0.000760035756727685, 1.23346576305068 )
+( 0.000791703913258005, 1.23361016984446 )
+( 0.000823372069788325, 1.23375457663823 )
+( 0.000855040226318645, 1.23389898343201 )
+( 0.000886708382848965, 1.23404339022579 )
+( 0.000918376539379286, 1.23418779701957 )
+( 0.000950044695909606, 1.23433220381335 )
+( 0.000981712852439926, 1.23447661060713 )
+( 0.00101338100897025, 1.2346210174009 )
+( 0.00104504916550057, 1.23476542419468 )
+( 0.00107671732203089, 1.23490983098846 )
+( 0.00110838547856121, 1.23505423778224 )
+( 0.00114005363509153, 1.23519864457602 )
+( 0.00117172179162185, 1.2353430513698 )
+( 0.00120338994815217, 1.23548745816357 )
+( 0.00123505810468249, 1.23563186495735 )
+( 0.00126672626121281, 1.23577627175113 )
+( 0.00129839441774313, 1.23592067854491 )
+( 0.00133006257427345, 1.23606508533869 )
+( 0.00136173073080377, 1.23620949213247 )
+( 0.00139339888733409, 1.23635389892624 )
+( 0.00142506704386441, 1.23649830572002 )
+( 0.00145673520039473, 1.2366427125138 )
+( 0.00148840335692505, 1.23678711930758 )
+( 0.00152007151345537, 1.23693152610136 )
+( 0.00155173966998569, 1.23707593289513 )
+( 0.00158340782651601, 1.23722033968891 )
+( 0.00161507598304633, 1.23736474648269 )
+( 0.00164674413957665, 1.23750915327647 )
+( 0.00167841229610697, 1.23765356007025 )
+( 0.00171008045263729, 1.23779796686403 )
+( 0.00174174860916761, 1.2379423736578 )
+( 0.00177341676569793, 1.23808678045158 )
+( 0.00180508492222825, 1.23823118724536 )
+( 0.00183675307875857, 1.23837559403914 )
+( 0.00186842123528889, 1.23852000083292 )
+( 0.00190008939181921, 1.2386644076267 )
+( 0.00193175754834953, 1.23880881442047 )
+( 0.00196342570487985, 1.23895322121425 )
+( 0.00199509386141017, 1.23909762800803 )
+( 0.0020267620179405, 1.23924203480181 )
+( 0.00205843017447082, 1.23938644159559 )
+( 0.00209009833100114, 1.23953084838937 )
+( 0.00212176648753146, 1.23967525518314 )
+( 0.00215343464406178, 1.23981966197692 )
+( 0.0021851028005921, 1.2399640687707 )
+( 0.00221677095712242, 1.24010847556448 )
+( 0.00224843911365274, 1.24025288235826 )
+( 0.00228010727018306, 1.24039728915203 )
+( 0.00231177542671338, 1.24054169594581 )
+( 0.0023434435832437, 1.24068610273959 )
+( 0.00237511173977402, 1.24083050953337 )
+( 0.00240677989630434, 1.24097491632715 )
+( 0.00243844805283466, 1.24111932312093 )
+( 0.00247011620936498, 1.2412637299147 )
+( 0.0025017843658953, 1.24140813670848 )
+( 0.00253345252242562, 1.24155254350226 )
+( 0.00256512067895594, 1.24169695029604 )
+( 0.00259678883548626, 1.24184135708982 )
+( 0.00262845699201658, 1.2419857638836 )
+( 0.0026601251485469, 1.24213017067737 )
+( 0.00269179330507722, 1.24227457747115 )
+( 0.00272346146160754, 1.24241898426493 )
+( 0.00275512961813786, 1.24256339105871 )
+( 0.00278679777466818, 1.24270779785249 )
+( 0.0028184659311985, 1.24285220464627 )
+( 0.00285013408772882, 1.24299661144004 )
+( 0.00288180224425914, 1.24314101823382 )
+( 0.00291347040078946, 1.2432854250276 )
+( 0.00294513855731978, 1.24342983182138 )
+( 0.0029768067138501, 1.24357423861516 )
+( 0.00300847487038042, 1.24371864540893 )
+( 0.00304014302691074, 1.24386305220271 )
+( 0.00307181118344106, 1.24400745899649 )
+( 0.00310347933997138, 1.24415186579027 )
+( 0.0031351474965017, 1.24429627258405 )
+}  node{ }; 
+
+\end{axis}
+
+\end{tikzpicture}
+
+
+\end{document}

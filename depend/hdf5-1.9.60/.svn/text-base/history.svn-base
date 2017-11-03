@@ -1,0 +1,2 @@
+./configure --prefix=$HOME/usr --libdir=$HOME/usr/lib$CLUSTER --enable-parallel --enable-shared --with-pic --with-default-api-version=v16
+make install

@@ -1,0 +1,17 @@
+The latest version of KSSOLV uses a different way to set optional 
+parameters for scf.m and trdcm.m.  The optional parameters can be
+set in an option structure that can be created using the setksopt
+function. Do 'help setksopt' to learn more.
+
+For some older versions of MATLAB, the following statement
+
+   alist =[a1 a2 a2 a2 a2];
+
+generates an error message. To get around it, you can use
+
+alist(1) = a1;
+for j = 2:5
+  alist(j) = a2;
+end;
+
+instead.

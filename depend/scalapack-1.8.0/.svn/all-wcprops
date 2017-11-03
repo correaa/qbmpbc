@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/250/depend/scalapack-1.8.0
+END
+SLmake.inc.cygwin
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Qbox/!svn/ver/202/depend/scalapack-1.8.0/SLmake.inc.cygwin
+END
+SLmake.inc.mc-cc
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Qbox/!svn/ver/170/depend/scalapack-1.8.0/SLmake.inc.mc-cc
+END
+SLmake.inc.wcr-intel
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Qbox/!svn/ver/152/depend/scalapack-1.8.0/SLmake.inc.wcr-intel
+END
+SLmake.inc.su-ahpcrc
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Qbox/!svn/ver/151/depend/scalapack-1.8.0/SLmake.inc.su-ahpcrc
+END
+SLmake.inc.wcr-gcc
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Qbox/!svn/ver/150/depend/scalapack-1.8.0/SLmake.inc.wcr-gcc
+END
+SLmake.inc.yana
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Qbox/!svn/ver/250/depend/scalapack-1.8.0/SLmake.inc.yana
+END
+SLmake.inc.hera-mpichgcc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Qbox/!svn/ver/190/depend/scalapack-1.8.0/SLmake.inc.hera-mpichgcc
+END

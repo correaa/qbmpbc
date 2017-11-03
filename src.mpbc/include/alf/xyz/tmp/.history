@@ -1,0 +1,6 @@
+cat .history 
+cd tmp
+ls
+asy betaboron.asy 
+nautilus .
+asy beta-boron.asy -f pdf -render=2

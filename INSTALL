@@ -1,0 +1,33 @@
+
+ Qbox installation requires the following libraries:
+
+ - BLAS (or ATLAS) 	http://www.netlib.org/atlas
+			http://math-atlas.sourceforge.net
+ - LAPACK 		http://www.netlib.org/lapack
+ - BLACS		http://www.netlib.org/scalapack
+ - ScaLAPACK 		http://www.netlib.org/scalapack
+ - FFTW 2.1.5 		http://www.fftw.org
+ - Apache Xerces-C	http://xerces.apache.org/xerces-c
+
+ Once these libraries are installed, a Makefile header must be created to
+ include the proper locations of libraries. The best way to create a 
+ Makefile header is to start from one of the examples (e.g. x8664_gcc.mk)
+ in the src directory, and modify it for the desired target platform. The
+ makefile header must be placed in the src directory. To build Qbox, the
+ following commands can then be used (assuming the Makefile header is
+ "myplatform.mk"):
+
+ $ export TARGET=myplatform
+ $ make
+
+ Notes:
+ - On some platforms (notably AIX) gmake must be used instead of make.
+ - On some platforms, the blas and lapack libraries provided in the 
+   /usr/lib64 directory are not reliable and cause Qbox to produce NaNs.
+   Rebuilding the ATLAS and LAPACK libraries from the netlib distribution
+   solves this problem.
+ - The autoconf/automake process is not used since it is difficult to make
+   it work for cross-compilation (e.g. on BG/L).
+
+ For more details about the build/installation process, see
+ http://eslab.ucdavis.edu/software/qbox

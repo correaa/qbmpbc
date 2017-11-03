@@ -1,0 +1,50 @@
+1. Environmental variable
+
+   set KSSOLVPATH to the directory that contains this README file.
+
+   In unix/linux, do 
+      setenv KSSOLVPATH <directory name> 
+   or
+      export KSSOLVPATH=<directory name>
+
+      You may want to add this to your .cshrc or .bashrc
+
+   In Windows XP, 
+      click on Start->My Computer 
+      click View system information on the left (System Task) panel
+      click Advanced
+      click Environmental variables
+      click new, type in the variable name KSSOLVPATH, and the directory 
+      in which kssolv is installed.
+
+2. Test problems 
+   There are several test problems in this directory
+
+   sih4_setup.m       --- silane molecule 
+   sibulk_setup.m     --- Silicon bulk (2 Silicon atoms per cell)
+   qdot_setup.m       --- A four electron quantum dot with an external potential
+   ptnio_setup.m      --- PtNiO molecule
+   co2_setup.m        --- carbon dioxide molecule
+   h2o_setup.m        --- water molecule
+   hnco_setup.m       --- isocyanic acid molecule
+   c2h6_setup.m       --- ethane molecule
+
+   After executing any one of these scripts, type 'mol' at the prompt. It'll
+   show some of characteristics of the system
+
+   Use 
+
+     [Etotvec, X, vtot, rho] = scf(mol);
+
+   or
+  
+     [Etotvec, X, vtot, rho] = dcm(mol);
+
+   or
+     [Etotvec, X, vtot, rho] = trdcm(mol);
+
+   to compute the ground state energy (Etot) and wavefunctions (X)
+
+
+   Do 'help dcm' or 'help scf' to see additional options allowed
+   in these functions.

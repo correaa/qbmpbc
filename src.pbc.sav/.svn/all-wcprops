@@ -1,0 +1,1361 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/Qbox/!svn/ver/242/src.pbc.sav
+END
+test_fftw3_boost.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/test_fftw3_boost.C
+END
+StructureFactor.C
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StructureFactor.C
+END
+spline.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/spline.h
+END
+SDIonicStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDIonicStepper.h
+END
+NetCharge.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/NetCharge.h
+END
+Basis.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Basis.h
+END
+StructuredDocumentHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StructuredDocumentHandler.h
+END
+ThTemp.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ThTemp.h
+END
+TorsionConstraint.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/TorsionConstraint.h
+END
+QuitCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/QuitCmd.h
+END
+Ubuntux86.mk
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Ubuntux86.mk
+END
+Wavefunction.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Wavefunction.h
+END
+CGIonicStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CGIonicStepper.C
+END
+AngleCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AngleCmd.h
+END
+LineMinimizer.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/LineMinimizer.h
+END
+SampleStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleStepper.C
+END
+NonLocalPotential.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/NonLocalPotential.C
+END
+TorsionCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/TorsionCmd.h
+END
+PSDWavefunctionStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PSDWavefunctionStepper.h
+END
+RunCmd.C
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/RunCmd.C
+END
+Stress.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Stress.h
+END
+PBEFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PBEFunctional.C
+END
+BLYPFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BLYPFunctional.C
+END
+XMLGFPreprocessor.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/XMLGFPreprocessor.h
+END
+testChargeDensity.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testChargeDensity.C
+END
+MDWavefunctionStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MDWavefunctionStepper.C
+END
+WfDyn.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/WfDyn.h
+END
+CellLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CellLock.h
+END
+MoveCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MoveCmd.h
+END
+MLWFTransform.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MLWFTransform.C
+END
+testjade.C
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testjade.C
+END
+SampleReader.C
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleReader.C
+END
+StructureFactor.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StructureFactor.h
+END
+testFourierTransform.C
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testFourierTransform.C
+END
+testBase64Transcoder.C
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testBase64Transcoder.C
+END
+wcr-gcc.mk
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/wcr-gcc.mk
+END
+AtomSet.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomSet.C
+END
+testEnergyFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testEnergyFunctional.C
+END
+Ecutprec.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Ecutprec.h
+END
+CGIonicStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CGIonicStepper.h
+END
+DistanceCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/DistanceCmd.h
+END
+testLDAFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testLDAFunctional.C
+END
+readTSC.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/readTSC.C
+END
+test_boost.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/test_boost.C
+END
+CellStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CellStepper.h
+END
+testSlaterDet.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testSlaterDet.C
+END
+SampleStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleStepper.h
+END
+AtomCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomCmd.h
+END
+ChargeDensity.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ChargeDensity.C
+END
+SpeciesHandler.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesHandler.C
+END
+NonLocalPotential.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/NonLocalPotential.h
+END
+RunCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/RunCmd.h
+END
+PBEFunctional.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PBEFunctional.h
+END
+BLYPFunctional.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BLYPFunctional.h
+END
+ThTime.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ThTime.h
+END
+Atom.C
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Atom.C
+END
+MDWavefunctionStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MDWavefunctionStepper.h
+END
+AtomsDyn.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomsDyn.h
+END
+jade.C
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/jade.C
+END
+MLWFTransform.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MLWFTransform.h
+END
+WfDiag.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/WfDiag.h
+END
+FourierTransform.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/FourierTransform.C
+END
+mc-cc.mk
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/mc-cc.mk
+END
+SampleReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleReader.h
+END
+Base64Transcoder.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Base64Transcoder.C
+END
+NameOf.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/NameOf.h
+END
+test_fftw3_plain.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/test_fftw3_plain.C
+END
+EnergyFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/EnergyFunctional.C
+END
+FoldInWsCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/FoldInWsCmd.h
+END
+ChargeMixCoeff.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ChargeMixCoeff.h
+END
+AtomSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomSet.h
+END
+LDAFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/LDAFunctional.C
+END
+Constraint.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Constraint.C
+END
+blas.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/blas.h
+END
+SlaterDet.C
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SlaterDet.C
+END
+testjacobi.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testjacobi.C
+END
+readTSC.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/readTSC.h
+END
+ChargeDensity.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ChargeDensity.h
+END
+SpeciesHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesHandler.h
+END
+DistanceConstraint.C
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/242/src.pbc.sav/DistanceConstraint.C
+END
+Atom.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Atom.h
+END
+Ecut.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Ecut.h
+END
+test_fftw.C
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/test_fftw.C
+END
+notes
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/Qbox/!svn/ver/242/src.pbc.sav/notes
+END
+ListAtomsCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ListAtomsCmd.h
+END
+jade.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/jade.h
+END
+SDCellStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDCellStepper.C
+END
+FourierTransform.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/FourierTransform.h
+END
+SampleWriter.C
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleWriter.C
+END
+Base64Transcoder.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Base64Transcoder.h
+END
+ThWidth.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ThWidth.h
+END
+WavefunctionStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/242/src.pbc.sav/WavefunctionStepper.h
+END
+release.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/release.C
+END
+EnergyFunctional.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/EnergyFunctional.h
+END
+mpbc.C
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/mpbc.C
+END
+sinft.C
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/sinft.C
+END
+ConfinementPotential.C
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ConfinementPotential.C
+END
+jacobi.C
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/jacobi.C
+END
+LDAFunctional.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/LDAFunctional.h
+END
+Constraint.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Constraint.h
+END
+qbox_xmlns.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/qbox_xmlns.C
+END
+ListConstraintsCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ListConstraintsCmd.h
+END
+SlaterDet.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SlaterDet.h
+END
+testXCFunctional.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testXCFunctional.C
+END
+Thermostat.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Thermostat.h
+END
+Nrowmax.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Nrowmax.h
+END
+x8664_gcc.mk
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/x8664_gcc.mk
+END
+LoadCmd.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/LoadCmd.C
+END
+DistanceConstraint.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/242/src.pbc.sav/DistanceConstraint.h
+END
+testMatrix.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testMatrix.C
+END
+StrX.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StrX.h
+END
+ExtStress.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ExtStress.h
+END
+AtomSetHandler.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomSetHandler.C
+END
+Dt.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Dt.h
+END
+Emass.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Emass.h
+END
+SDCellStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDCellStepper.h
+END
+SpeciesReader.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesReader.C
+END
+testAndersonMixer.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testAndersonMixer.C
+END
+SampleHandler.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleHandler.C
+END
+testUnitCell.C
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testUnitCell.C
+END
+ListSpeciesCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ListSpeciesCmd.h
+END
+SampleWriter.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleWriter.h
+END
+testContext.C
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testContext.C
+END
+MDIonicStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MDIonicStepper.C
+END
+release.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/release.h
+END
+sinft.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/sinft.h
+END
+bgl.mk
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/bgl.mk
+END
+ConfinementPotential.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ConfinementPotential.h
+END
+testSpecies.C
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testSpecies.C
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Makefile
+END
+jacobi.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/jacobi.h
+END
+qbox_xmlns.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/qbox_xmlns.h
+END
+SharedFilePtr.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SharedFilePtr.h
+END
+SDWavefunctionStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDWavefunctionStepper.C
+END
+Matrix.C
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Matrix.C
+END
+CPSampleStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CPSampleStepper.C
+END
+LoadCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/LoadCmd.h
+END
+su-ahpcrc.mk
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/su-ahpcrc.mk
+END
+StatusCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StatusCmd.h
+END
+testBasisMapping.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testBasisMapping.C
+END
+AndersonMixer.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AndersonMixer.C
+END
+AtomSetHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AtomSetHandler.h
+END
+SpeciesCmd.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesCmd.C
+END
+UnitCell.C
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/UnitCell.C
+END
+RefCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/RefCell.h
+END
+Nempty.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Nempty.h
+END
+HelpCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/HelpCmd.h
+END
+testSample.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testSample.C
+END
+SaveCmd.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SaveCmd.C
+END
+PSDAWavefunctionStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PSDAWavefunctionStepper.C
+END
+SpeciesReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesReader.h
+END
+SampleHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SampleHandler.h
+END
+Preconditioner.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Preconditioner.C
+END
+Cell.h
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Cell.h
+END
+Context.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Context.C
+END
+PrintCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PrintCmd.h
+END
+ComputeMLWFCmd.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ComputeMLWFCmd.C
+END
+Ecuts.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Ecuts.h
+END
+isodate.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/isodate.C
+END
+blacs.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/blacs.h
+END
+MDIonicStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/MDIonicStepper.h
+END
+XCPotential.C
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/XCPotential.C
+END
+AngleConstraint.C
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AngleConstraint.C
+END
+Species.C
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Species.C
+END
+SDAIonicStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDAIonicStepper.C
+END
+CellDyn.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CellDyn.h
+END
+UserInterface.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/UserInterface.C
+END
+ConstraintSet.C
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ConstraintSet.C
+END
+testBasis.C
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testBasis.C
+END
+XCFunctional.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/XCFunctional.h
+END
+BOSampleStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BOSampleStepper.C
+END
+WavefunctionHandler.C
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/242/src.pbc.sav/WavefunctionHandler.C
+END
+SDWavefunctionStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDWavefunctionStepper.h
+END
+CellMass.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CellMass.h
+END
+testWavefunction.C
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testWavefunction.C
+END
+Matrix.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Matrix.h
+END
+IonicStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/IonicStepper.h
+END
+ChargeMixRcut.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ChargeMixRcut.h
+END
+CPSampleStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/CPSampleStepper.h
+END
+xmlSpecies.C
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/xmlSpecies.C
+END
+BasisMapping.C
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BasisMapping.C
+END
+ConstraintCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ConstraintCmd.h
+END
+RandomizeWfCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/RandomizeWfCmd.h
+END
+Xc.h
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Xc.h
+END
+ResetVcmCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ResetVcmCmd.h
+END
+AndersonMixer.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AndersonMixer.h
+END
+SetCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SetCmd.h
+END
+SpeciesCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SpeciesCmd.h
+END
+UnitCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/UnitCell.h
+END
+testXMLGFPreprocessor.C
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/Qbox/!svn/ver/242/src.pbc.sav/testXMLGFPreprocessor.C
+END
+Timer.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Timer.h
+END
+SaveCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SaveCmd.h
+END
+x8664_gcc_RedHat.mk
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/x8664_gcc_RedHat.mk
+END
+PSDAWavefunctionStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PSDAWavefunctionStepper.h
+END
+Preconditioner.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Preconditioner.h
+END
+Context.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Context.h
+END
+StrainCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StrainCmd.h
+END
+spline.C
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/spline.C
+END
+SDIonicStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDIonicStepper.C
+END
+ComputeMLWFCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ComputeMLWFCmd.h
+END
+KpointCmd.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/KpointCmd.h
+END
+isodate.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/isodate.h
+END
+D3vector.h
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/D3vector.h
+END
+XCPotential.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/242/src.pbc.sav/XCPotential.h
+END
+AngleConstraint.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/AngleConstraint.h
+END
+Species.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Species.h
+END
+SDAIonicStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/SDAIonicStepper.h
+END
+Basis.C
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Basis.C
+END
+StructuredDocumentHandler.C
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StructuredDocumentHandler.C
+END
+TorsionConstraint.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/TorsionConstraint.C
+END
+qb.C
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/Qbox/!svn/ver/242/src.pbc.sav/qb.C
+END
+x8664_gcc_Ubuntu.mk
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/x8664_gcc_Ubuntu.mk
+END
+StructureHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/242/src.pbc.sav/StructureHandler.h
+END
+UserInterface.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/UserInterface.h
+END
+ConstraintSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/242/src.pbc.sav/ConstraintSet.h
+END
+Wavefunction.C
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Wavefunction.C
+END
+BOSampleStepper.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BOSampleStepper.h
+END
+WavefunctionHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/242/src.pbc.sav/WavefunctionHandler.h
+END
+aix_mpi.mk
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/242/src.pbc.sav/aix_mpi.mk
+END
+PSDWavefunctionStepper.C
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Qbox/!svn/ver/242/src.pbc.sav/PSDWavefunctionStepper.C
+END
+BasisMapping.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/Qbox/!svn/ver/242/src.pbc.sav/BasisMapping.h
+END
+XMLGFPreprocessor.C
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Qbox/!svn/ver/242/src.pbc.sav/XMLGFPreprocessor.C
+END
+Control.h
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Control.h
+END
+Sample.h
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Sample.h
+END
+Debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/242/src.pbc.sav/Debug.h
+END
+FermiTemp.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/242/src.pbc.sav/FermiTemp.h
+END

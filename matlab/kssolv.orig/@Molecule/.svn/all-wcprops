@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule
+END
+Molecule.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/Molecule.m
+END
+display.m
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/display.m
+END
+set.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/set.m
+END
+addatoms.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/addatoms.m
+END
+get.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/get.m
+END
+finalize.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/Qbox/!svn/ver/59/matlab/kssolv.orig/@Molecule/finalize.m
+END

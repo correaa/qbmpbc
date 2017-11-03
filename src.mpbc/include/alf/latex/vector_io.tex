@@ -1,0 +1,100 @@
+\documentclass[12pt,fleqn]{tufte-handout}
+\usepackage[compatibility=off, font={small}]{caption}
+\usepackage{comment}\usepackage[utf8x]{inputenc}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+ \lstset{language={[GNU]C++}}
+ \lstset{backgroundcolor=\color{darkgray}}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt}
+\hypersetup{pdfencoding=unicode}
+\newcommand{\unicodesub}[1]{_{#1}}
+\newcommand{\unicodewide}[1]{#1}
+\DeclareUnicodeCharacter{"BD}{\ensuremath{\text{\textonehalf}}}
+\DeclareUnicodeCharacter{"035D}{\ensuremath{\phi}} 
+\DeclareUnicodeCharacter{"212B}{\mathrm{\mathring{A}}} 
+\DeclareUnicodeCharacter{"2329}{\ensuremath{\langle}}
+\DeclareUnicodeCharacter{"232A}{\ensuremath{\rangle}}
+\DeclareUnicodeCharacter{"1D62}{\ensuremath{_i}}
+\DeclareUnicodeCharacter{"2044}{\over}
+\DeclareUnicodeCharacter{"2C7C}{\ensuremath{_j}}
+\DeclareUnicodeCharacter{"2148}{\unichar{105}}
+\DeclareUnicodeCharacter{"1D4E9}{\ensuremath{\mathcal{Z}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D4D4}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"2192}{\ensuremath{\rightarrow}}
+\DeclareUnicodeCharacter{"2799}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{"27F6}{\ensuremath{\longrightarrow}}
+\DeclareUnicodeCharacter{"2423}{\ensuremath{\quad}}
+\DeclareUnicodeCharacter{"FF08}{\bigg(}
+\DeclareUnicodeCharacter{"FF09}{\bigg)}
+\DeclareUnicodeCharacter{"FF5B}{\left\{}
+\DeclareUnicodeCharacter{"FF5D}{\right\}}
+\DeclareUnicodeCharacter{"FFFD}{\ensuremath{\mathcal{E}}}
+\DeclareUnicodeCharacter{"1D700}{\ensuremath{\varepsilon}}
+\DeclareUnicodeCharacter{"1D714}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{"1D70B}{\ensuremath{\pi}}
+\usepackage{amsmath}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{pifont}
+\usepackage{bbold}
+\usepackage{textcomp}
+\usepackage{color}
+\geometry{left=1.1cm, right=8.5cm, marginparwidth = 6.5cm}
+\usepackage{savesym}
+\savesymbol{marginnote}
+\usepackage{pdfcomment}
+\restoresymbol{pdfcomm}{marginnote}
+\savesymbol{Cross}
+\usepackage{cool}
+\usepackage[]{attachfile2}
+\usepackage[]{pdfmarginpar}
+\pdfstringdefDisableCommands{%
+     \let\n\textLF
+ }
+\DeclareUnicodeCharacter{"00B2}{^2}
+\DeclareUnicodeCharacter{"03B1}{\alpha}
+\DeclareUnicodeCharacter{"03B2}{\beta}
+\DeclareUnicodeCharacter{"03B8}{\theta}
+\DeclareUnicodeCharacter{"1D609}{_\text{B}}
+\DeclareUnicodeCharacter{"1D624}{_\text{c}}
+\DeclareUnicodeCharacter{"1D6FA}{\Omega}
+\DeclareUnicodeCharacter{"1D6FD}{\beta}
+\DeclareUnicodeCharacter{"1D707}{\mu}
+\DeclareUnicodeCharacter{"1D70E}{\sigma}
+\DeclareUnicodeCharacter{"1D708}{\nu}
+
+\usepackage{graphicx}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{color}
+\makeatletter
+\AddToShipoutPicture{%
+   \setlength{\@tempdimb}{.5\paperwidth}%
+   \setlength{\@tempdimc}{.5\paperheight}%
+   \setlength{\unitlength}{1pt}%
+   \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+	\makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.95}%
+	{\fontsize{6cm}{6cm}\selectfont{}}}}%
+}%
+}
+\makeatother\usepackage{backref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\usepackage{datetime} \ddmmyyyydate
+%\usepgfplotslibrary{external}
+%\tikzexternalize% activate externalization!
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\begin{document}
+This is a vector \{(5, 1), (6, 2), (7, 2), (8, 1), (8, 1), (8, 1), (8, 1)\}
+
+\par This is a map \{(1$\rightarrow$2), (2$\rightarrow$3), (3$\rightarrow$4), (4$\rightarrow$5), (5$\rightarrow$6)\}
+
+\end{document}

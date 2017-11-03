@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/Qbox/!svn/ver/250/depend/BLACS
+END
+Bmake.inc.hera-mpichgcc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Qbox/!svn/ver/190/depend/BLACS/Bmake.inc.hera-mpichgcc
+END
+Bmake.inc.cygwin
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/202/depend/BLACS/Bmake.inc.cygwin
+END
+Bmake.inc.debian
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/249/depend/BLACS/Bmake.inc.debian
+END
+Bmake.inc.mc-cc
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Qbox/!svn/ver/170/depend/BLACS/Bmake.inc.mc-cc
+END
+Bmake.inc.wcr-intel
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/150/depend/BLACS/Bmake.inc.wcr-intel
+END
+Bmake.inc.su-ahpcrc
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/151/depend/BLACS/Bmake.inc.su-ahpcrc
+END
+Bmake.inc.wcr-gcc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/Qbox/!svn/ver/150/depend/BLACS/Bmake.inc.wcr-gcc
+END
+Bmake.inc.yana
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/Qbox/!svn/ver/250/depend/BLACS/Bmake.inc.yana
+END

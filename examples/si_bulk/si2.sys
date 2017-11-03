@@ -1,0 +1,4 @@
+set cell 5.13 5.13 0 0 5.13 5.13 5.13 0 5.13
+species silicon silicon.xml
+ atom Si1 silicon 1.2825 1.2825 1.2825
+ atom Si2 silicon -1.2825 -1.2825 -1.2825

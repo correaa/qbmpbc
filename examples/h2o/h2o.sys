@@ -1,0 +1,6 @@
+set cell  20 0 0   0 20 0   0 0 20
+species oxygen oxygen_pbe.xml
+species hydrogen hydrogen_pbe.xml
+atom O1   oxygen  -2.54842759   0.01361820   0.02658338 
+atom H1   hydrogen  -3.29545817   1.44490214  -0.88094391 
+atom H2   hydrogen  -3.30385874  -1.47121654  -0.78267865 

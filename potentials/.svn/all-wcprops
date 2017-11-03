@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 31
+/svn/Qbox/!svn/ver/1/potentials
+END
+silicon.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/1/potentials/silicon.xml
+END
+Si_PBE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/1/potentials/Si_PBE.xml
+END
+hydrogen_pbe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/1/potentials/hydrogen_pbe.xml
+END
+species.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/1/potentials/species.xsd
+END
+carbon_pbe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/1/potentials/carbon_pbe.xml
+END
+nitrogen_pbe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/Qbox/!svn/ver/1/potentials/nitrogen_pbe.xml
+END
+oxygen_pbe.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/1/potentials/oxygen_pbe.xml
+END

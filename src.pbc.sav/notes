@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+rel1_45_0
+Added strain command for deformation of the cell.
+UnitCell.C: removed member compute_deda (moved calc to SDCellStepper). Added
+symmetric matrix - vector product function.
+SDCellStepper.C fixed calculation of cell correction from stress tensor.
+BOSampleStepper.C: reintroduced wf extrapolation when nempty>0 for MD.
+RunCmd.h: fixed help msg.
+--------------------------------------------------------------------------------
+rel1_44_5
+BOSampleStepper.C: Fix uninitialized mlwft ptr. Fixed delete statements.
+--------------------------------------------------------------------------------
+rel1_44_4
+BOSampleStepper.C: reintroduced feature that keeps memory of wfv between run
+commands. Allows for smooth continuation of multiple runs. Added MLWF and 
+MLWFC calculation in the niter loop.
+Modified wf extrapolation to include alignment in all cases. Use lowdin
+orthogonalization after extrapolation.
+WfDiag.h: Added MLWF and MLWFC option for the wf_diag variable: computes MLWFs
+or MLWF centers at each ionic step. 
+SaveCmd.[Ch], SampleWriter.[Ch]: added -no_wfv option: save without wf velocity.
+--------------------------------------------------------------------------------
+rel1_44_3
+UserInterface.h, Base64Transcoder.C: added include <cstring>
+removed trailing blanks.
+--------------------------------------------------------------------------------
+rel1_44_2
+Added copyright headers.
+--------------------------------------------------------------------------------
+rel1_44_1
+EnergyFunctional.C: fixed calculation of Esr and Esr stress in cases where the
+unit cell is small compared with rcps (initialized in AtomSet.C).
+--------------------------------------------------------------------------------

@@ -1,0 +1,77 @@
+#-------------------------------------------------------------------------------
+#
+# Copyright (c) 2008 The Regents of the University of California
+#
+# This file is part of Qbox
+#
+# Qbox is distributed under the terms of the GNU General Public License 
+# as published by the Free Software Foundation, either version 2 of 
+# the License, or (at your option) any later version.
+# See the file COPYING in the root directory of this distribution
+# or <http://www.gnu.org/licenses/>.
+#
+#-------------------------------------------------------------------------------
+#
+#  wcr.mk
+#
+#-------------------------------------------------------------------------------
+# $Id: wcr.mk,v 1.11 2008/06/18 03:39:53 fgygi Exp $
+#
+ PLT=wcr
+#-------------------------------------------------------------------------------
+ MPIDIR=/opt/mpich/gnu
+ XERCESCDIR=$(HOME)/Codes/xerces-c-src_2_8_0
+ FFTWDIR=$(HOME)/Codes/fftw-2.1.5
+ BLASDIR=/usr/lib64
+ LAPACKDIR=/usr/lib64
+
+ PLTOBJECTS = readTSC.o
+
+ CXX=/opt/mpich/gnu/bin/mpicxx
+ LD=$(CXX)
+
+ PLTFLAGS += -DIA32 -DUSE_FFTW -D_LARGEFILE_SOURCE \
+             -D_FILE_OFFSET_BITS=64 -DUSE_MPI -DSCALAPACK -DADD_ \
+             -DAPP_NO_THREADS -DXML_USE_NO_THREADS -DUSE_XERCES
+
+
+ INCLUDE = -I$(MPIDIR)/include -I$(FFTWDIR)/include -I$(XERCESCDIR)/src
+
+ CXXFLAGS= -g -O4 -D$(PLT) $(INCLUDE) $(PLTFLAGS) $(DFLAGS)
+
+ LIBPATH = -L$(GCCDIR)/lib -L$(FFTWDIR)/.libs -L/usr/X11R6/lib \
+           -L$(MPIDIR)/lib -L$(LAPACKDIR) -L$(BLASDIR) \
+           -L$(XERCESCDIR)/lib
+
+ LIBS =  $(PLIBS) -L$(FFTWDIR)/lib -lfftw \
+         -latlas -llapack -lblas -lm \
+         -Xlinker -lxerces-c -Bstatic \
+          -lc -static-libgcc -lmpich  \
+         -Xlinker -Bdynamic
+
+ LDFLAGS = $(LIBPATH) $(LIBS)
+
+ PLAT=LINUX
+ # Blacs libraries
+ BLACSDBGLVL   = 0
+ BLACSdir      = $(HOME)/Codes/BLACS/LIB
+ BLACSFINIT    = $(BLACSdir)/blacsF77init_MPI-$(PLAT)-$(BLACSDBGLVL).a
+ BLACSCINIT    = $(BLACSdir)/blacsCinit_MPI-$(PLAT)-$(BLACSDBGLVL).a
+ BLACSLIB      = $(BLACSdir)/blacs_MPI-$(PLAT)-$(BLACSDBGLVL).a
+
+ CBLACSLIB     = $(BLACSCINIT) $(BLACSLIB) $(BLACSCINIT)
+ FBLACSLIB     = $(BLACSFINIT) $(BLACSLIB) $(BLACSFINIT)
+
+ # Scalapack libraries
+ SCALAPACK_DIR = $(HOME)/Codes/scalapack-1.8.0
+ SCALAPACKLIB  = -L$(SCALAPACK_DIR) -lscalapack
+
+# MKLBLACSLIB   = /opt/intel/cmkl/9.1.023/lib/em64t/libmkl_blacs.a 
+# MKLLAPACKLIB   = /opt/intel/cmkl/9.1.023/lib/em64t/libmkl_lapack.a /opt/intel/cmkl/9.1.023/lib/em64t/libmkl_em64t.a /opt/intel/cmkl/9.1.023/lib/em64t/libguide.a
+# MKLSCALAPACKLIB = /opt/intel/cmkl/9.1.023/lib/em64t/libmkl_scalapack.a 
+
+# Parallel libraries
+ PLIBS = $(SCALAPACKLIB) $(CBLACSLIB)
+#  PLIBS = $(MKLSCALAPACKLIB) $(MKLBLACSLIB) $(MKLLAPACKLIB)
+
+#-------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+./configure --prefix=$HOME/usr --libdir=$HOME/usr/lib$CLUSTER --enable-shared=yes --disable-fortran --with-pic
+make install

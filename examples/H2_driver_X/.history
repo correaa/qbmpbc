@@ -1,0 +1,173 @@
+ls
+cd H2_driver_X/
+ls
+sh current.cpp
+e current.cpp
+sh current.cpp
+cd H2_driver_
+cd H2_driver_X/
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+sh current.cpp
+pkg-config --help
+pkg-config --list-all
+pkg-config --list-all | grep lapack
+pkg-config --list-all | grep gnu
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+pkg-config --list-all | grep gsl
+sh current.cpp
+ls
+ls
+ls
+sh current.cpp x
+sh current.cpp x
+ls
+less current.cpp
+ls
+less convergence.x.dat 
+less convergence.x.dat 
+mv convergence.x.dat convergence.x.dat.save
+mv convergence.x.dat convergence.x.dat.save
+e current.cpp
+ls
+sh current.cpp
+sh current.cpp
+sh current.cpp
+submit './current.cpp.x x 2>&1 current.cpp.x.log' '-tM 200h'
+ls
+mkdir Y
+ls
+cd ..
+ls
+ls -all
+less .submit-start
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+less .submit-stderr 
+./current.cpp.x x
+ls
+ls -all
+rm -f .submit-end .submit-send .submit-start .submit-stderr
+ls
+ls
+less convergence.x.dat
+less convergence.x.dat
+rm convergence.x.dat
+submit './current.cpp.x x 2>&1 current.cpp.x.log' '-tM 200h'
+submit './current.cpp.x x 2>&1 current.cpp.x.log' '-tM 200h'
+pstat
+ls
+ls -all
+ls -all
+ls -all
+ls -all
+ls -all
+less .submit-stderr
+../current.cpp.x y 2>&1 | tee current.cpp.x.log
+cd ..
+pstat
+cd ..
+ls
+less current.cpp.x.log 
+ls -all
+less .submit-stderr
+ln -s ../../xml/sample.xsd 
+ls
+pstat
+cd ..
+ls
+less current.cpp.x.log
+ls -all
+less.submit-stderr
+less.submit-stderr
+less .submit-stderr
+less sample.xsd 
+submit '../current.cpp.x x 2>&1 > current.cpp.x.log' '-tM 200h'
+pstat
+ls
+less current.cpp.x.log
+ls -all
+less .submit-stderr
+submit './current.cpp.x x 2>&1 > current.cpp.x.log' '-tM 200h'
+for((a=929615; a<=931016; ++a)); do yes | palter $a -b warmmat ; done
+cd -
+cd -
+cd -
+ls
+rm -rf *.xml
+rm -rf *.h5
+pstat
+prm 939923
+cd XY
+ls
+ls
+cd ..
+mkdir wf
+big_file wf
+ls
+e current.cpp
+quota -v
+pstat
+ls
+ls
+e current.cpp
+pstat
+pstat
+pstat
+quota -v
+pwd
+ls
+rm -rf *.xml
+quota -v
+ls
+cd H2_driver_X
+ls
+rm -rf *.dat
+ls
+ls
+cd ..
+ls
+sh current.cpp
+pstat
+pstat
+ls
+cat .history 
+submit './current.cpp.x x 2>&1 > current.cpp.x.log' '-tM 200h'
+pstat
+cd ..
+ls
+ls
+ls
+find -size +50M
+cd ./prj/mag/Qbox/examples/H2_driver_X/
+cd ./prj/mag/Qbox/examples/H2_driver_X/
+ls -all .submit-*
+ls -all .submit-*

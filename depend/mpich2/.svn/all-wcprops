@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/Qbox/!svn/ver/249/depend/mpich2
+END
+uninstall
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/249/depend/mpich2/uninstall
+END

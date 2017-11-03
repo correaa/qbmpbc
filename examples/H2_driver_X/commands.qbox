@@ -1,0 +1,70 @@
+set nrowmax 1
+kpoint delete 0 0 0
+kpoint add 1e-08 0 0 1
+set nempty 0
+set cell 30 0 0  0 30 0  0 0 30
+species hydrogen "../h2o/hydrogen_pbe.xml"
+atom H1 hydrogen 14.3008 15 15 
+atom H2 hydrogen 15.6992 15 15 
+# atoms exported as xyz file '"atoms.xyz"'
+set ecut 300
+set xc PBE
+set wf_dyn PSD
+set ecutprec 75
+randomize_wf
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+save "wf/wf.ecut300.x.xml"
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+save "wf/wf.ecut300.x.xml"
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+save "wf/wf.ecut300.x.xml"
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+save "wf/wf.ecut300.x.xml"
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+run 0 6 6
+save "wf/wf.ecut300.x.xml"

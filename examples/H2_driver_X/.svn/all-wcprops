@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/Qbox/!svn/ver/257/examples/H2_driver_X
+END
+current.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/257/examples/H2_driver_X/current.cpp
+END
+plot_NMR_convergence.m
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Qbox/!svn/ver/239/examples/H2_driver_X/plot_NMR_convergence.m
+END
+H2_NMR_converge.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/Qbox/!svn/ver/239/examples/H2_driver_X/H2_NMR_converge.pdf
+END
+species.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Qbox/!svn/ver/257/examples/H2_driver_X/species.xsd
+END
+plot_H2X_current.m
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/Qbox/!svn/ver/173/examples/H2_driver_X/plot_H2X_current.m
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/Qbox/!svn/ver/243/examples/H2_driver_X/Makefile
+END

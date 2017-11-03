@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//
+//  test_fftw3_plain.C
+//
+//  /opt/mpich/gnu/bin/mpicxx -I/home/caiwei/usr/include test_fftw3_plain.C -L/home/caiwei/usr/lib -lfftw3 -o test_fftw3_plain
+//
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include <fftw3.h>
+#include <math.h>
+
+void test_1 ()
+{     
+  const ptrdiff_t N0 = 18, N1 = 18;
+  fftw_plan myplan;
+  fftw_complex *data;
+
+  data = (fftw_complex *) fftw_malloc(sizeof(fftw_complex) * N0 * N1);
+
+  /* create plan for forward DFT */
+  myplan = fftw_plan_dft_2d(N0, N1, data, data, FFTW_FORWARD, FFTW_ESTIMATE);
+  
+  /* initialize data to some function my_function(x,y) */
+  int i, j;
+  double pdata=0;
+  for (i = 0; i < N0; ++i){
+    for (j = 0; j < N1; ++j){
+      data[i*N1 + j][0]=i; 
+      data[i*N1 + j][1]=0;
+      pdata+=data[i*N1 + j][0]*data[i*N1 + j][0]+data[i*N1 + j][1]*data[i*N1 + j][1];
+    }
+  }
+  printf("power of original data is %f\n", pdata);
+
+  /* compute transforms, in-place, as many times as desired */
+  fftw_execute(myplan);
+
+  double normalization=sqrt((double)N0*N1);
+  double ptransform = 0;
+  for (i = 0; i < N0; ++i){
+    for (j = 0; j < N1; ++j){
+      data[i*N1+j][0]/=normalization;
+      data[i*N1+j][1]/=normalization;
+      ptransform+=data[i*N1 + j][0]*data[i*N1 + j][0]+data[i*N1 + j][1]*data[i*N1 + j][1];
+    }
+  }
+
+  printf("power of transform is %f\n", pdata);
+ 
+  fftw_destroy_plan(myplan);
+
+}
+
+int main(int argc, char **argv){
+
+   test_1 ();
+
+   return 0;
+}
+
+

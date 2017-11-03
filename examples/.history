@@ -1,0 +1,9 @@
+ls
+cd examples/
+e current.cpp
+e current.cpp
+ls
+cd ../examples/
+ls
+ls
+cd examples/

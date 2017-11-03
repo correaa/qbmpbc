@@ -1,0 +1,32 @@
+ls
+cd src.mpbc/
+ls
+ls
+export TARGET=target/aztec
+head Makefile
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+make clena
+make clean
+export TARGET=target/yana
+make clean
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+./qb 
+ls
+gedit target/yana.mk
+e target/yana.mk
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+LS
+cd ..
+cd ../src.mpbc/
+cd ../src.mpbc/
+ls
+ls
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+less Makefile
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+less Makefile
+for((a=929615; a<=931016; ++a)); do yes | palter $a -b warmmat ; done
+cd ~/prj/mag/Qbox/src.mpbc/
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"
+make clean
+make DFLAGS+="-D_MPBC -D_USE_HDF5 -D_SHORTFFT"

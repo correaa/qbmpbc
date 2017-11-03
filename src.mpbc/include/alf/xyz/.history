@@ -1,0 +1,132 @@
+ls
+ls
+cd "/home/correaa/prj/alf/xyz"
+cd "/home/correaa/prj/alf/xyz"
+locate boron.xyz
+cd xyz
+cd xyz
+ls
+mv boron.xyz beta-boron.xyz
+ls
+sh io.hpp 
+ls
+less beta-boron.asy 
+sh io.hpp 
+ls
+evince beta-boron+0_0.pdf
+bg
+acroread beta-boron+0_0.pdf
+ls
+evince beta-boron+0_0.eps
+less beta-boron.tex 
+ls
+asy -f pdf beta-boron.asy
+ls
+evince beta-boron.pdf
+acroread beta-boron.p
+acroread beta-boron.pdf 
+acroread beta-boron.pdf 
+acroread beta-boron.pdf 
+bg
+bg
+sh io.hpp 
+ls
+asy -f pdf beta-boron.asy
+acroread beta-boron.pdf 
+acroread beta-boron.pdf 
+asy --help
+ls
+less beta-boron.asy 
+asy -f pdf beta-boron.asy
+ls -all
+acroread beta-boron.pdf
+asy -f pdf beta-boron.asy
+ls
+asy --help
+asy -f pdf -k beta-boron.asy
+asy -f pdf -k beta-boron.asy
+ls
+ls -s
+ls -s
+acroread beta-boron.pdf
+ls
+evince beta-boron_.eps
+ls
+evince beta-boron_0.eps
+pdflatex mie.tex
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+nautilus .
+sh io.hpp 
+sh io.hpp 
+ls
+ls -all
+acroread beta-boron.pdf
+sh io.hpp 
+acroread beta-boron.pdf
+kill %
+kill %
+ls
+mv beta-boron.xyz ..; rm beta-boron*; mv ../beta-boron.xyz .
+mv beta-boron.xyz ..; rm beta-boron* -f; mv ../beta-boron.xyz .
+ls
+sh io.hpp 
+ls
+asy -f pdf -k beta-boron.asy
+ls
+ls -all
+ls -all
+acroread beta-boron.pdf
+ls
+sh io.hpp 
+asy -f pdf -k beta-boron.asy
+ls
+acroread beta-boron.pdf
+sh io.hpp 
+asy -f pdf -k beta-boron.asy
+acroread beta-boron.pdf
+bg
+sh io.hpp 
+sh io.hpp 
+sh io.hpp 
+sh io.hpp 
+asy -f pdf -k beta-boron.asy
+ls
+less beta-boron.xyz 
+less beta-boron.xyz 
+less beta-boron.xyz 
+sh io.hpp 
+sh io.hpp 
+sh io.hpp 
+asy -f pdf -k beta-boron.asy
+asy -f pdf -k beta-boron.asy
+ls
+cd "/home/correaa/prj/alf/xyz"
+ls
+asy beta-boron.asy
+mv ~/usr/include/boost/geometry/geometries/adapted/boost_array_geographic.hpp .
+nautilus .&
+asy beta-boron.asy -render=0
+asy beta-boron.asy -f pdf -render=0
+asy beta-boron.asy -f pdf -render=-1
+asy beta-boron.asy -f pdf -render=2
+asy beta-boron.asy -f pdf -render=4
+asy beta-boron.asy -f pdf -render=3
+asy beta-boron.asy -f pdf -render=2
+asy beta-boron.asy -f pdf -render=1
+ls
+ls
+cd prj/alf/xyz/io.hpp 
+cd prj/alf/xyz/
+asy betaboron.asy 
+ls
+nautilus .
+mkdir tmp
+cp beta-boron.asy tmp/

@@ -1,0 +1,492 @@
+#ifdef compile_instructions
+ln -sf $0 .$0.cpp && c++ -Wall `#-Wfatal-errors` -Wextra -Wno-unused-variable .$0.cpp -I$HOME/usr/include -L$HOME/usr/lib -lboost_filesystem -lboost_system -D_TEST_ASYMPTOTE_HPP_2 -o .$0.cpp.x && ./.$0.cpp.x $1 $2 $3 $4 $5 $6 $7 $8 $9
+exit
+#endif
+#ifndef ASYMPTOTE_HPP
+#define ASYMPTOTE_HPP
+#include<sstream>
+//#include<boost/filesystem.hpp>
+#include<boost/filesystem/fstream.hpp>
+#include<boost/lexical_cast.hpp>
+#include<boost/multi_array.hpp>
+#include<boost/optional.hpp>
+#include<boost/process.hpp>
+#include<set>
+#include<stack>
+#include<iostream>
+using std::clog; using std::endl;
+namespace asymptote{
+	using namespace boost::filesystem;
+	using boost::optional;
+	using boost::extents;
+	using std::string;
+	using std::set;
+	using boost::lexical_cast;
+	struct ostream;
+	struct drawable{
+		virtual ostream& draw_to(ostream&) const=0;
+		virtual ostream& draw_to(ostream&, string options) const=0;
+		virtual ~drawable(){}
+	};
+	struct dottable{
+		virtual ostream& dotted(ostream&, string options="") const=0;
+		virtual ~dottable(){}
+	};
+	struct ostream_base : public std::ostringstream{
+		ostream_base() : std::ostringstream(){} //gcc 4.1.2
+		ostream_base(ostream_base const& other) :
+			std::basic_ios<char, std::char_traits<char> >(), //solve gcc 4.4 -Wextra
+			std::ostringstream(other.str()){}
+	};
+	template<class CRTP>
+	struct ostream_category : virtual public ostream_base{
+		protected:
+		ostream_category(){}
+		ostream_category(ostream_category const& other) : /*solve warn:Wextra*/ std::basic_ios<char, std::char_traits<char> >(), ostream_base(other){}
+	};
+	struct render{
+		bool merge;
+		unsigned compression;
+		bool closed;
+		render() : merge(true), compression(0), closed(true){}
+	};
+	struct ostream : ostream_category<ostream>{ //private std::ostringstream{
+		set<string> modules_;
+		path p_;
+		optional<string> size_;
+		std::stack<string> group3_;
+		render defaultrender;
+		ostream& size(string s){size_=s; return *this;}
+		/*needed by gcc 4.1?*/ ostream();
+		struct options{
+			options() : prc_(true){}
+			bool prc_; public: options& prc(bool b=true){prc_=b; return *this;}
+			static options current_default;
+		} options_;
+		ostream(path p, options o=options::current_default) : p_(p), options_(o){}
+		~ostream(){flush(*this);}
+		ostream& import(string const& lib){(*this)<< "import " << lib<<";\n"; return *this;}
+		ostream& draw(drawable const& d){return d.draw_to(*this);}
+		ostream& draw(drawable const& d, string options){return d.draw_to(*this, options);}
+		ostream& dot(dottable const& d, string options=""){return d.dotted(*this, options);}
+		ostream& begingroup3(std::string const& name){(*this) << "begingroup3(\""<<name<<"\");\n"; group3_.push(name); return *this;}
+		ostream& endgroup3(){(*this) << "endgroup3();\n";  assert(group3_.size()>0); group3_.pop(); return *this;}
+		static ostream& flush(ostream& os){
+			os<<std::flush;
+			path p_asy = os.p_;
+			p_asy.replace_extension(".asy");
+			clog << "generating " << p_asy << "...";
+			{
+				ofstream ofs(p_asy);
+				for(set<string>::const_iterator it=os.modules_.begin(); it!=os.modules_.end(); ++it){
+					ofs <<"import "<<*it<<";\n";
+				}
+			ofs<<
+					"import unicode;\n"
+					"texpreamble(\"\\usepackage{mathtools}\");\n" 
+					"import palette;\n";
+					//"size(8.0cm, IgnoreAspect);\n"
+			if(os.size_) ofs << "size(" << *os.size_ <<");\n";
+			ofs << std::boolalpha;
+			
+			ofs << "import three;\n"
+				<< "defaultrender.merge="<< os.defaultrender.merge <<";\n"
+				<< "defaultrender.compression="<< os.defaultrender.compression <<";\n"
+				<< "defaultrender.closed="<< os.defaultrender.closed <<";\n"
+			;
+
+			/*
+			ofs << 
+				//"defaultrender.merge=true;\n"
+				"//size3(9cm, 9cm, 6cm);\n"
+				//"currentprojection=perspective(2,-1,1.5);\n";
+				//"currentprojection=orthographic(1,-2,1);\n"; kindofflat
+				//"currentprojection=orthographic(1,-2,10);\n"; best
+				//"currentprojection=orthographic(0.8,1,1);\n"; //flatinverted
+				//"currentprojection=orthographic(10,10,30);\n"; //deep inverted
+				//"currentprojection=orthographic(0.5,1,0.5);\n";
+				//ofs<<os.preamble().str()<<"\n"
+			;*/
+				ofs	<< os.str()<<"\n";
+			}
+			std::string exec = boost::process::find_executable_in_path("asy");
+			std::vector<std::string> args; 
+			boost::process::context ctx;
+			ctx.environment = boost::process::self::get_environment(); 
+			//ctx.stdout_behavior = boost::process::inherit_stream(); // boost::process::silence_stream(); 
+			boost::filesystem::remove(os.p_);
+			if(os.p_.extension()==".pdf"){
+				args.push_back(exec);
+				args.push_back(p_asy.string());
+				args.push_back("-fpdf"); 
+				args.push_back("-render=1");
+				args.push_back("-maxviewport=800,800"); 
+				args.push_back("-nothreads");
+				std::clog << "generating " << os.p_ << std::endl;
+				boost::process::child c = boost::process::launch(exec, args, ctx); 
+				c.wait();
+			}else if(os.p_.extension()==".tex"){
+				path pre = os.p_; pre.replace_extension(".pre");
+				boost::filesystem::remove(pre);
+				args.push_back(exec);
+				args.push_back(p_asy.string()); //1
+				args.push_back("-inlineimage"); //2
+				args.push_back("-tex");   //3
+				args.push_back("pdflatex"); //4
+				args.push_back("-render=1"); // 5
+				args.push_back("-maxviewport=800,800"); //6
+				args.push_back(""); //("-nothreads");
+				{
+					std::string cmd = "asy " + args[1] + " " + args[2] + " " + args[3] + " " +  args[4] + " " +  args[5] + " " +  args[6] + " " + args[7];
+					std::clog << "generating " << os.p_ << " with command line '" << cmd << "'" << std::endl;
+					int ignore = system(cmd.c_str() );
+				}
+				//assert(ignore);
+				//boost::process::child c = boost::process::launch(exec, args, ctx); 
+				//c.wait();
+				//std::clog << "status " << s.exit_status() << std::endl;
+				//assert(s.exit_status()==0);
+				/*
+				path p_pdf_aux(os.p_.stem() + "+0_0.pdf");
+				int ret= -1;
+				if(os.options_.prc_){
+				ret = system(("asy "+p_asy.string()+" -f pdf -inlineimage -render=0").c_str()); //asy -inlineimage teapot -render=4 -tex pdflatex -glOptions=-indirect -tex pdflatex
+				}else{
+					boost::filesystem::ofstream ofs(os.p_.stem()+"_.tex");
+					ofs<<"\\includegraphics[hiresbb]{"<<p_pdf_aux.string()<<"}";
+					//if(not boost::filesystem::exists(os.p_.stem()+"_.pre")){
+						boost::filesystem::ofstream ofs_pre(os.p_.stem()+"_.pre");
+					//}
+				}
+				ret = system(("asy "+p_asy.string()+" -o "+p_pdf_aux.string()+" -tex pdflatex -noprc -render=0").c_str()); //asy -inlineimage teapot -render=4 -tex pdflatex -glOptions=-indirect
+				if(ret != 0) throw std::runtime_error("can not produce pdf from generated asymptote code (error code:"+lexical_cast<string>(ret)+"), check temporary source file `"+p_asy.string()+"'");
+				system( ("sed -i 's/text={}/text={\\\\includegraphics[hiresbb]{"+p_pdf_aux.string()+"}}/g' "+os.p_.stem()+"_.tex").c_str());
+				*/
+			}else{
+				throw std::runtime_error("unknown extension to process asymptote output"); //" + os.p_.extension().string() + "
+			}
+			std::clog << "done" << std::endl;
+			return os;
+		}
+	};
+	ostream::options ostream::options::current_default;
+
+	typedef double real;
+	typedef boost::multi_array<double,1> real1;
+	typedef boost::multi_array<double,2> real2;
+	typedef boost::array<double, 3> triple;
+//	class triple : boost::array<double, 3>{
+//		triple(double x, double y, double z) : {}
+//	};
+	typedef boost::multi_array<triple, 1> triple1;
+	typedef boost::multi_array<triple, 2> triple2;
+	ostream_base& operator<<(ostream_base& osb, real2 const& r2){
+		osb<<"{";
+		for(unsigned i=0; i!=r2.shape()[0]; ++i){
+			osb<<"{";
+			for(unsigned j=0; j!=r2.shape()[1]; ++j){
+				osb<<r2[i][j]; if(j+1!=r2.shape()[1]) osb<<", ";
+			}
+			osb<<"}"; if(i+1!=r2.shape()[0]) osb<<", ";
+		}
+		osb<<"}";
+		return osb;
+	}
+	ostream_base& operator<<(ostream_base& osb, real1 const& r1){
+		osb<<"{";
+		for(unsigned i=0; i!=r1.shape()[0]; ++i){
+			osb<<r1[i]; if(i+1!=r1.shape()[0]) osb<<", ";
+		}
+		osb<<"}";
+		return osb;
+	}
+	ostream_base& operator<<(ostream_base& osb, triple const& t){
+		osb<<"("<<t[0]<<", "<<t[1]<<", "<<t[2]<<")"; return osb;
+	}
+	ostream_base& operator<<(ostream_base& osb, triple1 const& t1){
+		osb<<"{";
+		for(unsigned i=0; i!=t1.shape()[0]; ++i){
+			osb<<t1[i]; if(i+1!=t1.shape()[0]) osb<<", ";
+		}
+		osb<<"}"; return osb;
+	}
+	ostream_base& operator<<(ostream_base& osb, triple2 const& t2){
+		osb<<"{";
+		for(unsigned i=0; i!=t2.shape()[0]; ++i){
+			osb<<"{";
+			for(unsigned j=0; j!=t2.shape()[1]; ++j){
+				osb<<t2[i][j]; if(j+1!=t2.shape()[1]) osb<<", ";
+			}
+			osb<<"}";
+			if(i+1!=t2.shape()[0]) osb<<", ";
+		}
+		osb<<"}"; return osb;
+	}
+	namespace three{
+		struct scale3 : ostream_category<scale3>{
+			scale3(double const& factor){ (*this)<<"scale3("; (*this) << factor; (*this)<<")"; }
+			struct ed : drawable, ostream_category<ed>{
+				ed(ed const& other) : /* solve warning:*/ std::basic_ios<char, std::char_traits<char> >(), asymptote::ostream_base(),
+					drawable(other), ostream_category<ed>(other){} 
+				ed(scale3 const& self, ostream_base const& d){
+					(*this) << self.str(); (*this)<<"*"; (*this) << d.str();
+				}
+				ostream& draw_to(ostream& os, string options) const{
+					os << "draw("<<this->str()<< (options.empty()?"":", ")<< options<<");\n"; return os;
+				}
+				ostream& draw_to(ostream& os) const{
+					return draw_to(os, "");
+				}
+			};
+			scale3::ed operator*(ostream_base const& d) const{return scale3::ed(*this, d);}
+		}; 
+		struct shift : ostream_category<shift>{
+			shift(triple const& t){
+				(*this)<<"shift(";(*this)<<t; (*this)<<")";
+			}
+			struct ed : drawable, ostream_category<ed>{
+				ed(ed const& other) : /* solve warning:*/ std::basic_ios<char, std::char_traits<char> >(), asymptote::ostream_base(),
+					drawable(other), ostream_category<ed>(other){} 
+				ed(shift const& s, ostream_base const& d){
+					(*this) << s.str(); (*this) <<"*"; (*this)<< d.str();
+				}
+				ostream& draw_to(ostream& os, string options) const{
+					os << "draw("<<this->str()<< (options.empty()?"":", ")<< options<<");\n"; return os;
+				}
+				ostream& draw_to(ostream& os) const{
+					return draw_to(os, "");
+				}
+			};
+			shift::ed operator*(ostream_base const& d) const{return shift::ed(*this, d);}
+		};
+		struct unitsphere_ : drawable, public ostream_category<unitsphere_>{
+			unitsphere_(){(*this)<<"unitsphere";}
+			ostream& draw_to(ostream& os, string options) const{
+				os << "draw("<<this->str()<< (options.empty()?"":", ")<< options<<");\n"; return os;
+			}
+			ostream& draw_to(ostream& os) const{
+				return draw_to(os, "");
+			}
+		} unitsphere;
+		struct line : 
+			drawable,
+			public ostream_category<line>
+		{
+			line(triple const& t1, triple const& t2){
+				(*this)<<"(" << t1[0] << ", " << t1[1] << ", " << t1[2] <<")--("<<t2[0]<<", " << t2[1]<<", " << t2[2] <<")";
+			}
+			ostream& draw_to(ostream& os) const{
+				os.modules_.insert("graph3");
+				os << "draw(" << this->str() << ");\n";
+				return os; //,nolight
+			}
+			ostream& draw_to(ostream& os, string options) const{
+				os.modules_.insert("graph3");
+				os << "draw(" << this->str() << ", " << options << ");\n";
+				return os; //,nolight
+			}
+
+		};
+		struct surface : 
+			drawable, 
+			public ostream_category<surface>
+		{
+			ostream_base predefine_;
+			surface(surface const& other) : /*solve warn:*/ std::basic_ios<char, std::char_traits<char> >(), asymptote::ostream_base(),
+				drawable(other), ostream_category<surface>(other){}
+			surface(std::string const& definition){
+				(*this)<<definition;
+			}
+			surface(ostream_base const& d){
+				(*this)<<d.str();
+			}
+			surface(const char def[]){
+				(*this)<<def;
+			}		
+			surface(real2 const& f, real1 const& x, real1 const& y){
+				predefine_<<"{\n";
+				predefine_<<"real[][] f"<<&f<<" = "; predefine_<<f<<";\n";
+				predefine_<<"real[] x"<<&x<<" = "; predefine_<<x<<";\n";
+				predefine_<<"real[] y"<<&y<<" = "; predefine_<<y<<";\n";
+				(*this)<<"surface(f"<<&f; (*this)<<", x"<<&x; (*this)<<", y"<<&y<<" )"; //, monotonic)";
+			}
+			surface(real2 const& f, real1 const& x, real1 const& y, string options){
+				predefine_<<"{\n";
+				predefine_<<"real[][] f"<<&f<<" = "; predefine_<<f<<";\n";
+				predefine_<<"real[] x"<<&x<<" = "; predefine_<<x<<";\n";
+				predefine_<<"real[] y"<<&y<<" = "; predefine_<<y<<";\n";
+				(*this)<<"surface(f"<<&f; (*this)<<", x"<<&x; (*this)<<", y"<<&y<<", "<< options << " )";
+			}
+			surface(triple2 const& t2){
+				predefine_<<"{\n";
+				predefine_<<"triple[][] t2"<<&t2<<" = "; predefine_<<t2<<";\n";
+				(*this)<<"surface(t2"<<&t2; (*this)<<")"; 
+			}
+			ostream& draw_to(ostream& os) const{
+				os.modules_.insert("graph3");
+				os<<predefine_.str()<<"\n"; 
+				os<<"draw("<<this->str()<<", lightblue,meshpen=gray+thick(),render(merge=true));\n"; os<<"}\n";return os; //,nolight
+			}
+			ostream& draw_to(ostream& os, string options) const{
+//				clog << options;
+				os.modules_.insert("graph3");
+				os<<predefine_.str()<<"\n"; 
+				os<<"draw("<<this->str()<<", " << options << ");\n"; os<<"}\n";return os; //,nolight
+			}
+		};
+	}
+	namespace graph3{
+		struct axis3 : ostream_category<axis3>{
+			friend ostream& operator<<(ostream& os, axis3 const& self){
+				os<<self.str();
+				return os;
+			}
+		};
+		struct xaxis3 : axis3{
+			xaxis3(xaxis3 const&);
+			xaxis3(string Label=""){ (*this) << "xaxis3(Label(\""<<Label<<"\")/*,Arrow3(TeXHead2)*/, Bounds,InTicks(gray));\n";}
+		};
+		struct yaxis3 : axis3{
+			yaxis3(yaxis3 const&);
+			yaxis3(string Label=""){ (*this) << "yaxis3(Label(\""<<Label<<"\"),/*Arrow3(TeXHead2),*/ Bounds, InTicks(gray,beginlabel=false));\n";}
+		};
+		struct zaxis3 : axis3{
+			zaxis3(zaxis3 const&);
+			zaxis3(string Label=""){ (*this) << "zaxis3(Label(\""<<Label<<"\"), /*XYZero(extend=true) , Arrow3(TeXHead2),*/ Bounds,InTicks(gray));\n";}
+		};
+		struct connect : drawable, ostream_category<connect>{
+			connect(triple const& t1, triple const& t2){
+				(*this)<<t1; (*this)<<"--"; (*this)<<t2;
+			}
+			ostream& draw_to(ostream& os, string options) const{
+				os << "draw("<<this->str()<< (options.empty()?"":", ")<< options<<");\n"; return os;
+			}
+			ostream& draw_to(ostream& os) const{
+				return draw_to(os, "");
+			}
+		};
+		struct graph : drawable, dottable, private ostream_category<graph>{
+			ostream_base predefine_;
+			graph(triple1 const& t){
+				predefine_<<"{\ntriple[] t"<<&t<<" = "; predefine_<<t<<";\n";
+				(*this)<<"graph(t"<<&t; (*this)<<")";
+			}
+			ostream& draw_to(ostream& os) const{
+				return draw_to(os, "");
+			}
+			ostream& draw_to(ostream& os, string options) const{
+				os.modules_.insert("graph3");
+				os<<predefine_.str()<<"\n";
+				os<<"draw("<<this->str()<<(options==""?string(""):(", "+options))<<");\n}\n"; return os;
+			}
+			ostream& dotted(ostream& os, string options="") const{
+				os.modules_.insert("graph3");
+				os<<predefine_.str()<<"\n";
+				os<<"dot("<<this->str()<<(options==""?string(""):(", "+options))<<");\n}\n"; return os;
+			}
+		};
+	}
+}
+#endif
+
+#ifdef _TEST_ASYMPTOTE_HPP_2
+#include<boost/ref.hpp>
+int main(){
+	using namespace asymptote;
+	asymptote::ostream ao("asymptote.pdf");
+	using namespace asymptote::graph3;
+	surface carbon("scale3(70)*unitsphere");
+	surface hydrogen = "scale3(25)*unitsphere";
+	asymptote::triple c1 = {{0.,0.,0.}};
+	triple h1 = {{-6.98724, 109.314, 19.6968}};
+	triple h2 = {{-53.4044, -24.1997, -94.6041}};
+	triple h3 = {{-46.6211, -55.8814, 84.2109}};
+	triple h4 = {{107.001, -29.2263, -9.30131}};
+	shift sc1(c1);
+	ao.import("three");
+	ao<<"currentlight.background=white;\n";
+	ao.draw(shift(c1)*carbon, "red");
+	ao.draw(shift(h1)*hydrogen);
+	ao.draw(shift(h2)*hydrogen);
+	ao.draw(shift(h3)*hydrogen);
+	ao.draw(shift(h4)*hydrogen);
+	boost::array<boost::reference_wrapper<triple>, 5> ats={{boost::ref(c1), boost::ref(h1), boost::ref(h2), boost::ref(h3), boost::ref(h4)}};
+
+	return 0;
+}
+#endif
+
+#ifdef _TEST_ASYMPTOTE_HPP
+#include<iostream>
+using std::cout; using std::endl;
+
+int main(){
+	asymptote::triple1 t(boost::extents[4]); 
+	t[0]=(asymptote::triple){{1,0,0}};
+	t[1]=(asymptote::triple){{0,1,1}};
+	t[2]=(asymptote::triple){{-1,0,0}};
+	t[3]=(asymptote::triple){{0,-1,1}};
+	
+	asymptote::real1 xs(boost::extents[3]);
+	asymptote::real1 ys(boost::extents[3]);
+	asymptote::real2 fss(boost::extents[3][3]);
+
+	for(unsigned xi=0; xi!=fss.shape()[0]; ++xi){
+		double x=-1.+xi*2./fss.shape()[0];
+		xs[xi]=x;
+		for(unsigned yi=0; yi!=fss.shape()[1]; ++yi){
+			double y=-1.+yi*2./fss.shape()[1];
+			ys[yi]=y;
+			fss[xi][yi]=exp(-x*x-y*y);
+		}
+	}
+	asymptote::graph3::graph g(t);
+	asymptote::graph3::surface s(fss, xs, ys);
+	asymptote::ostream ao("asymptote.pdf");
+	//ao.draw(s);
+	ao.draw(g);
+	ao<<asymptote::graph3::xaxis3();
+	ao<<asymptote::graph3::yaxis3();
+	ao<<asymptote::graph3::zaxis3();
+//	ao << 
+//		"import graph3;\n"
+//		"import palette;\n";
+//	ao << "size3(200,IgnoreAspect);\n"
+//		"//file in=input(\"filesurface.dat\").line();\n"
+//		"real[] x="<<xs<<";\n"; //{1.,2.,3.};\n"
+//		"real[] y="<<ys<<";\n"; //{1.,2.,3.};\n"
+//		"real[][] f="<<fss<<";\n"; //{{1.,2.,3.},{1.,2.,3.},{3.,2.,1.}};\n"
+//		"triple f(pair t) {\n"
+//		"	int i=round(t.x);\n"
+//		"	int j=round(t.y);\n"
+//		"	return (x[i],y[j],f[i][j]);\n"
+//		"}\n"
+/*
+		"surface s = surface(f, x, y);\n"
+		"real[] level=uniform(min(f)*(1-sqrtEpsilon),max(f)*(1+sqrtEpsilon),4);\n"
+		"s.colors(palette(s.map(new real(triple v) {return find(level >= v.z);}),\n"
+		"                 Rainbow())); \n"
+		"draw(s,meshpen=thick(),render(merge=true));\n"
+		"triple m=currentpicture.userMin;\n"
+		"triple M=currentpicture.userMax;\n"
+		"triple target=0.5*(m+M);\n"
+		"xaxis3(\"$x$\",Bounds,InTicks);\n"
+		"yaxis3(\"$y$\",Bounds,InTicks(Step=1,step=0.1));\n"
+		"zaxis3(\"$z$\",Bounds,InTicks);\n"
+		"currentprojection=perspective(camera=target+realmult(dir(68,225),M-m),\n"
+		"                              target=target);\n";
+*/
+	cout << "done" <<endl;
+//		"surface s=surface(f,(0,0),(x.length-1,y.length-1),x.length-1,y.length-1);\n"
+
+	return 0;
+}
+#endif
+// Editor modelines  -  http://www.wireshark.org/tools/modelines.html
+// Local variables:
+// c-basic-offset: 4
+// tab-width: 4
+// indent-tabs-mode: t
+// truncate-lines: 1
+// End:
+// vim:set ft=cpp ts=4 sw=4 sts=4 nowrap: cindent:

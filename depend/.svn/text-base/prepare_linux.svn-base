@@ -1,0 +1,88 @@
+INIDIR=$PWD
+NUM_CORES=`cat /proc/cpuinfo | grep processor | wc -l`
+#	sudo /usr/bin/cpufreq-selector -g performance
+#	cd ~/soft
+#	ATLAS_VER=3.8.3
+#	wget http://voxel.dl.sourceforge.net/sourceforge/math-atlas/atlas$ATLAS_VER.tar.gz
+#	tar -zxvf atlas$ATLAS_VER.tar.gz
+#	mkdir ATLAS/build
+#	cd ATLAS/build
+#	../configure --prefix=$HOME/usr -b `getconf -a | grep WORD_BIT | awk '{print $2}'`
+#	make --jobs=1
+#	make install
+#	cd ~/soft
+#	wget http://www.netlib.org/lapack/lapack.tgz
+#	tar -zxvf lapack.tgz
+#	cd lapack-*
+#	cp make.inc.example make.inc
+#	make blaslib
+#	make --jobs=2
+#	make -p ~/usr/lib
+#	cd ~/usr/lib
+#	ln -sf ~/soft/lapack-3.2.2/blas_LINUX.a libblas.a
+#	ln -sf ~/soft/lapack-3.2.2/lapack_LINUX.a liblapack.a
+#	cd ~/soft
+	wget http://www.netlib.org/blacs/mpiblacs.tgz
+	tar -zxvf mpiblacs.tgz
+	cd BLACS
+	cp $INIDIR/BLACS/Bmake.inc.debian Bmake.include
+	cd SRC/MPI
+	make #<1 minute
+	mkdir -p ~/usr/lib
+	cd ~/usr/lib
+	ln -sf ~/soft/BLACS/LIB/blacsCinit_MPI-LINUX-0.a libblacsCinit-mpi.a
+	ln -sf ~/soft/BLACS/LIB/blacsF77init_MPI-LINUX-0.a libblacsF77init-mpi.a                    
+	ln -sf ~/soft/BLACS/LIB/blacs_MPI-LINUX-0.a libblacs-mpi.a
+	cd ~/soft
+	wget http://www.netlib.org/scalapack/scalapack-1.8.0.tgz
+	tar -zxvf scalapack-1.8.0.tgz
+	cd scalapack-1.8.0
+	cp $INIDIR/scalapack-1.8.0/SLmake.inc.debian SLmake.inc
+	mkdir --parents ~/usr/lib
+	make --jobs=1
+	cd ~/usr/lib
+	ln -sf ~/soft/scalapack-1.8.0/libscalapack.a .
+#	cd ~/soft
+#	wget http://www.fftw.org/fftw-2.1.5.tar.gz
+#	tar -zxvf fftw-2.1.5.tar.gz
+#	cd fftw-2.1.5
+#	./configure --prefix=$HOME/usr --enable-shared=yes --disable-fortran --enable-mpi
+#	make -j 1
+#	make install
+#	cd ~/soft
+#	wget http://www.fftw.org/fftw-3.3alpha1.tar.gz
+#	tar -zxvf fftw-3.3alpha1.tar.gz
+#	cd fftw-3.3alpha1
+#	./configure --prefix=$HOME/usr --enable-mpi --enable-shared=yes
+#	make --jobs=8
+#	make install
+#	XERCES_VER=3.1.1
+#	cd ~/soft
+#	wget http://apache.multihomed.net/xerces/c/3/sources/xerces-c-$XERCES_VER.tar.gz
+#	tar -zxvf xerces-c-$XERCES_VER.tar.gz
+#	cd xerces-c-$XERCES_VER
+#	./configure --prefix=$HOME/usr --libdir=$HOME/usr/lib$CLUSTER
+#	make --jobs=$NUM_CORES install 
+#	mkdir -p $HOME/usr
+#	mkdir -p $HOME/soft
+#	cd $HOME/soft
+#	BOOST_VER=1_43_0
+#	wget http://downloads.sourceforge.net/boost/boost_$BOOST_VER.tar.gz
+#	tar -zxvf boost_$BOOST_VER.tar.gz
+#	cd boost_$BOOST_VER
+#	./bootstrap.sh --prefix=$HOME/usr --libdir=$HOME/usr/lib
+#	echo "using mpi : mpic++ ;" >> project-config.jam #if you need mpi, replace "mpicxx" by your mpi compiler wrapper (e.g. mpicxx.mpich)
+#	NUM_CORES=`cat /proc/cpuinfo | grep processor | wc -l`
+#	time ./bjam -j $NUM_CORES | tee bjam.out
+#	./bjam install --prefix=$HOME/usr
+#	mkdir $HOME/soft
+#	cd $HOME/soft
+#	export HDF5_VER_MAJOR=19
+#	export HDF5_VER_MINOR=1.9.72
+#	wget ftp://ftp.hdfgroup.uiuc.edu/pub/outgoing/hdf5/snapshots/v$HDF5_VER_MAJOR/hdf5-$HDF5_VER_MINOR.tar.gz
+#	tar -zxvf hdf5-$HDF5_VER_MINOR.tar.gz
+#	cd hdf5-$HDF5_VER_MINOR
+#	CC=mpicc ./configure --prefix=$HOME/usr --enable-parallel --enable-shared --with-default-api-version=v16
+#	make --jobs=$NUM_CORES
+#	make install
+

@@ -1,0 +1,42 @@
+ &control
+    calculation = 'scf'
+    restart_mode= 'from_scratch',
+    prefix      = alanine,
+    pseudo_dir  = '/home/cyang/espresso-3.2.3/pseudo/'
+    outdir      = '/tmp'
+ /
+ &system
+    ibrav = 0,
+    nat   = 13,
+    ntyp  = 4,
+    ecutwfc = 25.0,
+ /
+ &system
+    diagonalization = 'cg'
+    mixing_mode = 'plain'
+    mixing_beta = 0.8
+    conv_thr = 1.0d-8
+ /
+CELL_PARAMETERS cubic
+   2.0000e+01     0.0000e+00     0.0000e+00
+   0.0000e+00     1.5000e+01     0.0000e+00
+   0.0000e+00     0.0000e+00     2.0000e+01
+ATOMIC_SPECIES
+  H     1.008e+00   H.vbc.UPF
+  C     1.201e+01   C.pz-vbc.UPF
+  N     1.401e+01   N.BLYP.UPF
+  O     1.600e+01   O.LDA.US.RRKJ3.UPF
+ATOMIC_POSITIONS {bohr}
+  H     -2.530e-01      3.093e+00      2.017e+00
+  N     -2.172e-01      1.274e+00      2.628e+00
+  C     -2.444e-01     -4.677e-01      5.148e-01
+  C      2.110e+00     -1.399e-01     -1.099e+00
+  O      3.432e+00      1.721e+00     -1.176e+00
+  C     -2.634e+00     -2.547e-02     -1.070e+00
+  H      1.409e+00      1.111e+00      3.634e+00
+  O      2.605e+00     -2.196e+00     -2.472e+00
+  H      4.012e+00     -2.260e+00     -3.551e+00
+  H     -2.407e-01     -2.430e+00      1.296e+00
+  H     -2.747e+00     -1.385e+00     -2.674e+00
+  H     -2.664e+00      1.923e+00     -1.870e+00
+  H     -4.372e+00     -2.723e-01      9.404e-02

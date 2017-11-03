@@ -1,0 +1,21 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// FourierTransform3.C
+//
+////////////////////////////////////////////////////////////////////////////////
+/*
+#include "FourierTransform3.h"
+#include "Basis.h"
+#include "Context.h"
+
+#include <complex>
+#include <algorithm>
+#include <map>
+#include <cassert>
+
+#if USE_MPI
+#include <mpi.h>
+#else
+typedef int MPI_Comm;
+#endif
+*/

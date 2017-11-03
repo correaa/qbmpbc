@@ -1,0 +1,26 @@
+#ifdef compile_instructions
+ln -sf $0 .$0.cpp && c++ -Wall `#-Wfatal-errors` -Wextra -Wno-unused-variable .$0.cpp -I$HOME/usr/include -L$HOME/usr/lib -lboost_filesystem -lboost_system -D_TEST_ASYMPTOTE_HPP_2 -o .$0.cpp.x && ./.$0.cpp.x $1 $2 $3 $4 $5 $6 $7 $8 $9
+exit
+#endif
+#ifndef XYZ_IO_HPP
+#include "../xyz.hpp"
+#include "../asymptote.hpp"
+
+namespace xyz{
+	void export(frame const& f, boost::filesystem::path p){
+		asymptote::ostream ao(p);
+		for(unsigned i=0; i!=f.size(); ++i){
+			surface sphere("scale3(70)*unitsphere"); //pm
+			triple position=f[i]*1000.;
+			ao.draw(shift(position)*sphere, "yellow");
+		}
+	}
+};
+
+
+int main(){
+	xyz::ifstream xyzi("beta-boron.xyz");
+	xyz::frame f; xyzi >> f;
+	export(f, "beta-boron.pdf");
+	return 0;
+}

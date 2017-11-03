@@ -1,0 +1,4 @@
+2
+# snapshot T_ion =0 K # vol = 27000 \mathit{m}_e^-6 \mathit{e}^-12 \mathit{ℏ}^12 1/(4 � �₀)^-6 # coordinates in angstroms
+  H 7.56766 7.93766 7.93766  crystal_vector 1 15.8753 0 0 crystal_vector 2 0 15.8753 0 crystal_vector 3 0 0 15.8753
+  H 8.30766 7.93766 7.93766  bbox_xyz  0. 15.8753 0. 15.8753 0. 15.8753

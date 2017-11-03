@@ -1,0 +1,49 @@
+ls
+cd units/
+cp -r * ~/prj/mag/Qbox/src.mpbc/include/boost/units/systems/
+cd
+cd prj/boost/units/
+ls /etc/ssh/
+cd prj/boost/units/
+ls
+cd ..
+ls
+cd ..
+ls
+ls
+ls
+cd units/
+ls
+ls
+ls
+ls
+e accumultors.hpp 
+e accumultors.hpp 
+sh accumultors.hpp
+e accumultors.hpp
+sh accumultors.hpp
+e accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+sh accumultors.hpp
+e +92 accumultors.hpp
+sh accumultors.hpp
+ls
+g++ -v
+ls
+cd units/

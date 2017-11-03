@@ -1,0 +1,31 @@
+#!/bin/bash
+#PBS -N qbox.H
+#PBS -j oe
+#PBS -l nodes=1:ppn=2,walltime=2:00:00
+#PBS -V
+
+### ---------------------------------------
+### BEGINNING OF EXECUTION
+### ---------------------------------------
+
+echo The master node of this job is `hostname`
+echo The working directory is `echo $PBS_O_WORKDIR`
+echo This job runs on the following nodes:
+echo `cat $PBS_NODEFILE`
+date
+
+ncpu=`cat $PBS_NODEFILE | wc -w`
+echo "Number of processors = $ncpu "
+
+### end of information preamble
+
+cd $PBS_O_WORKDIR
+
+echo $PWD 
+
+cmd="/opt/mpiexec/bin/mpiexec --comm=pmi -np $ncpu ./qb.wei gs.i"
+time $cmd &> gs.cell50.ecut20.MPBC."$ncpu"CPU.out.1
+
+echo $PWD 
+
+date

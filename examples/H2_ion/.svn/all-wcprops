@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/Qbox/!svn/ver/79/examples/H2_ion
+END
+gs.i
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/Qbox/!svn/ver/79/examples/H2_ion/gs.i
+END
+rerun.i
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/Qbox/!svn/ver/79/examples/H2_ion/rerun.i
+END
+qb.wei
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Qbox/!svn/ver/79/examples/H2_ion/qb.wei
+END
+hydrogen_bare_extended.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/Qbox/!svn/ver/79/examples/H2_ion/hydrogen_bare_extended.xml
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Qbox/!svn/ver/79/examples/H2_ion/Makefile
+END

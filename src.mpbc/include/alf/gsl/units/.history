@@ -1,0 +1,49 @@
+ls -all
+rm .*
+sh multi_fit.hpp 
+sh multi_fit.hpp  2>&1 > grep errro
+sh multi_fit.hpp  2>&1 > grep errro
+sh multi_fit.hpp  2>&1 > grep error
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+gedit /home/correaa/usr/include/boost/utility/result_of.hpp
+asy -v
+cd "/home/correaa/prj/alf/gsl/units"
+less multi_min.dat 
+sh multi_min.hpp 
+less multi_min.dat 
+sh multi_min.hpp 
+less multi_min.dat 
+less multi_min.dat 
+less multi_min.dat 
+less multi_min.dat 
+ooffice correa_cv.html 
+cd "/home/correaa/prj/alf/gsl/units"
+sh multi_min.hpp 2>&1 | grep error
+sh multi_min.hpp 2>&1 | grep error -A 1
+sh multi_min.hpp 2>&1 | grep error -A 1
+sh multi_min.hpp 2>&1 | grep error -B 1
+man cut
+sh multi_min.hpp 2>&1 | grep error -B 1 | grep -b 80
+sh multi_min.hpp 2>&1 | grep error -B 1 | grep -b 80
+sh multi_min.hpp 2>&1 | grep error -B 1 | cut -b 80
+man cut
+sh multi_min.hpp 2>&1 | grep error -B 1 | cut 10-20
+sh multi_min.hpp 2>&1 | grep error -B 1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+sh multi_min.hpp 2>&1 | cut -c1-80
+cd "/home/correaa/prj/hydro/fit"
+cd "/home/correaa/prj/alf/gsl/units"

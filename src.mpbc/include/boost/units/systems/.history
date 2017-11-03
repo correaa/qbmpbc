@@ -1,0 +1,84 @@
+ls
+cd systems/
+cd systems/
+ls
+ls
+cd systems/
+ls
+ls
+cd systems/
+ls
+grep dalton
+grep dalton *
+ls
+cd ..
+ls
+cd systems/
+ls
+cd ..
+ls
+cd ..
+less ~/usr/include/boost/units/quantity.hpp 
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+sh atomic.hpp | grep error
+sh atomic.hpp | grep error
+sh atomic.hpp
+sh atomic.hpp | grep error
+sh atomic.hpp | grep error | head
+sh atomic.hpp 2>&1 | grep error | head
+sh atomic.hpp 2>&1 | grep error | head | cut
+man cut
+sh atomic.hpp 2>&1 | grep error | head | cut -c 10
+man cut
+sh atomic.hpp 2>&1 | grep error | head | cut -b 10
+man cut
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-30
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-50
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-100
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error -A 1 | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error -A 1 | head | cut -c1-150
+sh atomic.hpp 2>&1 | grep error -A 1 | head | cut -c1-150
+sh atomic.hpp
+sh atomic.hpp
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+gdb ./.atomic.hpp.x 
+sh convex.hpp 
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"
+cd "/home/correaa/prj/mag/Qbox/src.mpbc/include/boost/units/systems"

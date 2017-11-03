@@ -1,0 +1,6 @@
+mkdir adapted
+cd adapted/
+mv ~/usr/include/boost/geometry/geometries/adapted/boost_array.hpp .
+mv ~/usr/include/boost/geometry/geometries/adapted/boost_array_cartesian.hpp .
+mv ~/usr/include/boost/geometry/geometries/adapted/boost_array_geographic.hpp .
+mv ~/usr/include/boost/geometry/geometries/adapted/boost_array_geographic.hpp .
